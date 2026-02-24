@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 10% 96%;
+    /* cream / off-white */
+    --foreground: 20 14% 4%;
+    /* near black */
+
+    --primary: 27 35% 25%;
+    /* deep walnut brown */
+    --primary-foreground: 40 10% 98%;
+
+    --secondary: 0 0% 15%;
+    /* matte black */
+    --secondary-foreground: 40 10% 98%;
+
+    --accent: 40 90% 60%;
+    /* gold */
+    --accent-foreground: 20 14% 4%;
+  }
+
+  .dark {
+    --background: 20 14% 4%;
+    --foreground: 30 10% 96%;
+
+    --primary: 27 35% 35%;
+    --primary-foreground: 40 10% 98%;
+
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 40 10% 98%;
+
+    --accent: 40 80% 55%;
+    --accent-foreground: 20 14% 4%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
