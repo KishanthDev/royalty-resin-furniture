@@ -4,37 +4,37 @@ const categories = [
   {
     name: "Side & Coffee Tables",
     href: "/collections/side-coffee-tables",
-    imageSrc: "/assets/side-coffee-tables/coffee/image1.png",
+    imageSrc: "/assets/side-coffee-table/coffee/image1.png",
     description: "Artistic tables blending natural wood and premium epoxy.",
   },
   {
     name: "Dining Tables",
     href: "/collections/dining-tables",
-    imageSrc: "/assets/categories/dining-tables.jpg",
+    imageSrc: "/assets/dining-tables/sea-shell/image1.png",
     description: "Grand statements of artistry for your dining space.",
   },
   {
     name: "Chess Collections",
     href: "/collections/chess-collections",
-    imageSrc: "/assets/categories/chess-collections.jpg",
+    imageSrc: "/assets/chess-collections/black-ice/image1.png",
     description: "Where strategic gameplay converges with fine art.",
   },
   {
     name: "Luxuries",
     href: "/collections/luxuries",
-    imageSrc: "/assets/categories/luxuries.jpg",
+    imageSrc: "/assets/luxury/image1.png",
     description: "Exquisite statements of artistry and craftsmanship.",
   },
   {
     name: "Chairs",
     href: "/collections/chairs",
-    imageSrc: "/assets/categories/chairs.jpg",
+    imageSrc: "/assets/chairs/image1.png",
     description: "Sculptural seating that merges comfort with artistry.",
   },
   {
     name: "Divine Collection",
     href: "/collections/divine-collection",
-    imageSrc: "/assets/categories/divine-collection.jpg",
+    imageSrc: "/assets/divine/image1.png",
     description: "Transcendent pieces where sacred geometry meets luminous artistry.",
   },
 ];
