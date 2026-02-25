@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { CTASection } from "@/app/CTASection";
-import { SectionTitle } from "@/app/SectionTitle";
+import { CTASection } from "@/app/(public)/CTASection";
+import { SectionTitle } from "@/app/(public)/SectionTitle";
 
 export default function AboutPage() {
   return (

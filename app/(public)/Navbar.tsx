@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "../../components/theme/ThemeToggle";
 import { usePathname } from "next/navigation";
 
 const menuItems = [
@@ -38,8 +38,8 @@ export function Navbar() {
                             key={item.name}
                             href={item.href}
                             className={`text-sm font-medium transition-colors ${isActive(item.href)
-                                    ? "text-primary border-b-2 border-primary"
-                                    : "hover:text-primary"
+                                ? "text-primary border-b-2 border-primary"
+                                : "hover:text-primary"
                                 }`}
                         >
                             {item.name}
@@ -52,8 +52,8 @@ export function Navbar() {
                         <Link
                             href="/about"
                             className={`text-sm transition-colors ${isActive("/about")
-                                    ? "text-primary border-b-2 border-primary"
-                                    : "hover:text-primary"
+                                ? "text-primary border-b-2 border-primary"
+                                : "hover:text-primary"
                                 }`}
                         >
                             About
@@ -61,8 +61,8 @@ export function Navbar() {
                         <Link
                             href="/contact"
                             className={`text-sm transition-colors ${isActive("/contact")
-                                    ? "text-primary border-b-2 border-primary"
-                                    : "hover:text-primary"
+                                ? "text-primary border-b-2 border-primary"
+                                : "hover:text-primary"
                                 }`}
                         >
                             Contact
@@ -87,8 +87,8 @@ export function Navbar() {
                             key={item.name}
                             href={item.href}
                             className={`text-lg transition-colors ${isActive(item.href)
-                                    ? "text-primary font-semibold"
-                                    : "hover:text-primary"
+                                ? "text-primary font-semibold"
+                                : "hover:text-primary"
                                 }`}
                         >
                             {item.name}
