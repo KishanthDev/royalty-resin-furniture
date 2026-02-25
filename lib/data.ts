@@ -5,57 +5,35 @@ import { Product } from "./types";
 const products: Product[] = [
   {
     id: "1",
-    name: "River Resin Dining Table",
-    slug: "river-resin-dining-table",
+    name: "Lava Forge Dining Table",
+    slug: "lava-forge-dining-table",
     description:
-      "A handcrafted walnut dining table featuring a deep blue epoxy river flowing through its center.",
+      "A dramatic dining table with a molten lava–inspired resin surface and charred wood inlays, creating a fiery statement piece that anchors any modern dining space.",
     price: 2400,
     category: "Dining Tables",
-    images: ["/products/river-table.jpg"],
+    images: ["/assets/table/lava-table.png"],
     inStock: true
   },
   {
     id: "2",
-    name: "Emerald Resin Coffee Table",
-    slug: "emerald-resin-coffee-table",
+    name: "Brew Blend Coffee Table",
+    slug: "brew-blend-coffee-table",
     description:
-      "Elegant coffee table crafted from olive wood and emerald green epoxy resin.",
+      "A handcrafted coffee table combining warm solid wood with crystal-clear resin encapsulating real coffee beans and latte art, set on minimalist hairpin legs for a cozy café-inspired living space.",
     price: 1200,
     category: "Coffee Tables",
-    images: ["/products/emerald-coffee.jpg"],
+    images: ["/assets/table/coffee-table.png"],
     inStock: true
   },
   {
     id: "3",
-    name: "Crystal Edge Console",
-    slug: "crystal-edge-console",
+    name: "Peacock Tide Resin Table",
+    slug: "peacock-tide-resin-table",
     description:
-      "A sleek console table blending natural wood edges with crystal-clear resin.",
+      "A statement dining table featuring a live-edge wooden frame and a glossy turquoise resin river inlaid with peacock feather motifs, creating a vibrant, art-piece centerpiece for any modern space.",
     price: 980,
-    category: "Console Tables",
-    images: ["/products/crystal-console.jpg"],
-    inStock: true
-  },
-  {
-    id: "4",
-    name: "Ocean Flow Side Table",
-    slug: "ocean-flow-side-table",
-    description:
-      "Compact side table inspired by ocean waves captured in blue resin.",
-    price: 450,
-    category: "Side Tables",
-    images: ["/products/ocean-side.jpg"],
-    inStock: false
-  },
-  {
-    id: "5",
-    name: "Golden Horizon Desk",
-    slug: "golden-horizon-desk",
-    description:
-      "Modern executive desk with golden-tinted epoxy and rich walnut wood.",
-    price: 1800,
-    category: "Desks",
-    images: ["/products/golden-desk.jpg"],
+    category: "Divine Tables",
+    images: ["/assets/table/peacock-tide-table.png"],
     inStock: true
   },
 ];
