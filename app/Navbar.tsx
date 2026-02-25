@@ -25,7 +25,7 @@ export function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-foreground/10">
-            <div className="container mx-auto flex items-center justify-between p-section-px h-20">
+            <div className="container mx-auto flex items-center justify-between p-4 h-16">
                 <Link href="/" className="font-serif text-2xl font-bold text-primary">
                     Royalty Resin
                 </Link>

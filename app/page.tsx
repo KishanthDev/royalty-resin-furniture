@@ -62,22 +62,22 @@ export default function HomePage() {
         <div className="container mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-[4/5]">
             <Image
-              src="/artistic-vision.jpg" // Add to /public folder
-              alt="Artistic vision in furniture design"
+              src="/assets/artistic/chess.jpg"
+              alt="Artistic vision in chess design"
               fill
               className="object-cover"
             />
           </div>
           <div className="text-right">
             <h2 className="font-serif text-4xl md:text-6xl leading-tight">
-              An Artistic Vision,
+              Strategy Meets
               <br />
-              <span className="text-primary">Impeccably Executed.</span>
+              <span className="text-primary">Artistic Excellence.</span>
             </h2>
             <p className="mt-8 text-lg text-foreground/80 max-w-md ml-auto">
-              Our vision is to transform living spaces with furniture that tells
-              a story. A story of nature's perfection and human artistry,
-              intertwined.
+              Our vision is to create bespoke chess sets where strategic gameplay
+              converges with fine art. Each piece is a masterwork of nature's wood
+              and human craftsmanship, elevated to timeless elegance.
             </p>
           </div>
         </div>
