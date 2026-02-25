@@ -62,7 +62,7 @@ export default function HomePage() {
         <div className="container mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-[4/5]">
             <Image
-              src="/assets/artistic/chess.jpg"
+              src="/assets/artistic/chess.JPG"
               alt="Artistic vision in chess design"
               fill
               className="object-cover"
