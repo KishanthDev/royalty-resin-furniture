@@ -13,9 +13,6 @@ export function CTASection() {
                     Whether you are a designer, architect, or a discerning homeowner, we are here to bring your vision to life. Let's discuss your next project.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
-                    <Link href="/b2b-inquiry" className="bg-primary text-primary-foreground py-3 px-8 font-semibold hover:bg-primary/90 transition-colors rounded-sm">
-                        B2B Inquiry
-                    </Link>
                     <Link href="/contact" className="border border-primary-foreground/50 text-secondary-foreground py-3 px-8 font-semibold hover:bg-primary-foreground hover:text-secondary transition-colors rounded-sm">
                         Contact Us
                     </Link>

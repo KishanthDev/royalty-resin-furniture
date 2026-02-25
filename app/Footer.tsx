@@ -18,7 +18,6 @@ export function Footer() {
                             <li><Link href="/collections/all" className="hover:text-accent transition-colors">Collections</Link></li>
                             <li><Link href="/about" className="hover:text-accent transition-colors">About Us</Link></li>
                             <li><Link href="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
-                            <li><Link href="/b2b-inquiry" className="hover:text-accent transition-colors">B2B Inquiries</Link></li>
                         </ul>
                     </div>
                     <div>
