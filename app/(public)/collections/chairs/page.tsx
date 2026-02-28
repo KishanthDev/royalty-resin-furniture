@@ -1,5 +1,5 @@
 import { CollectionPage } from "@/components/CollectionPage";
-import { collections } from "@/lib/demo";
+import { collections } from "@/lib/chairs-data";
 
 export default function ChairsPage() {
     return (

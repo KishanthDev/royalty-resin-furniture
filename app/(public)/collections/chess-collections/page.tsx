@@ -1,18 +1,18 @@
 import { CollectionPage } from "@/components/CollectionPage";
-import { collections } from "@/lib/demo";
+import { collections } from "@/lib/chess-collections.data";
 
-export default function ChessCollectionPage() {
+export default function ChessCollectionsPage() {
     return (
         <CollectionPage
             title="Chess Collections"
-            heroDescription="Strategic masterpieces where rare wood converges with luminous epoxy. Each board becomes a battlefield of artistry—where every move plays against a backdrop of crystalline elegance and timeless craftsmanship."
-            introTitle="Where Strategy Meets Splendor"
-            introDescription="Transform your game into an experience. Our chess boards are sculptural treasures that blend premium wood grain patterns with radiant resin artistry—perfect for collectors, enthusiasts, and those who believe every match deserves an extraordinary setting."
-            customizationTitle="Crafted for the Discerning Player"
-            customizationDescription="Customize board size, wood species, resin colors, and piece designs to reflect your chess passion. Ideal for tournament players, collectors, luxury gifts, and those seeking a chess experience that transcends the game itself."
-            ctaTitle="Commission Your Signature Chess Board"
-            ctaDescription="Envision your perfect board. Share your style preferences, desired dimensions, or unique requirements—our artisans will handcraft a bespoke chess masterpiece that elevates every game into a work of art."
-            contactSubject="Custom Chess Board Design"
+            heroDescription="Where strategy meets artistry. Our bespoke chess sets are crafted from the finest wood and shimmering epoxy resin, turning every match into a masterpiece of tactical elegance."
+            introTitle="A Game of Kings, Reimagined"
+            introDescription="Each set is a unique work of art, designed for players who appreciate both form and function. From the weight of the pieces to the luster of the board, every detail is considered to enhance your playing experience."
+            customizationTitle="Your Board, Your Legacy"
+            customizationDescription="Commission a one-of-a-kind chess set. Choose your wood, resin colors, and piece design to create a personal heirloom that reflects your style and passion for the game."
+            ctaTitle="Ready to Make Your Move?"
+            ctaDescription="Contact us to discuss your custom chess set. Whether for display or for play, we'll craft a set that is as unique as your strategy."
+            contactSubject="Custom Chess Set Design"
             collections={collections}
         />
     );

@@ -1,5 +1,5 @@
 import { CollectionPage } from "@/components/CollectionPage";
-import { collections } from "@/lib/demo";
+import { collections } from "@/lib/divine-data";
 
 export default function DivineCollectionPage() {
     return (

@@ -1,5 +1,5 @@
 import { CollectionPage } from "@/components/CollectionPage";
-import { collections } from "@/lib/demo";
+import { collections } from "@/lib/dining-tables.data";
 
 export default function DiningTablesPage() {
     return (
