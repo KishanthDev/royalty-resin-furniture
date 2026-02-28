@@ -1,3 +1,5 @@
+// app/collections/all/page.tsx
+
 import { CategoryList } from "@/components/CategoryList";
 
 const categories = [
@@ -42,25 +44,54 @@ const categories = [
 export default function AllCollectionsPage() {
   return (
     <>
-      {/* 1. Hero Section */}
-      <section className="bg-secondary text-secondary-foreground py-16 md:py-24 border-b border-border/40">
-        <div className="container mx-auto px-4 text-center max-w-4xl">
-          <p className="uppercase tracking-[0.25em] text-xs md:text-sm text-secondary-foreground/70">
-            Royalty Resin
-          </p>
-          <h1 className="mt-4 font-serif text-4xl md:text-6xl font-bold">
-            Our Collections
+      {/* ── HERO ── */}
+      <section className="bg-secondary text-secondary-foreground py-20 md:py-28 relative overflow-hidden">
+        {/* Radial glow */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-[500px] h-[500px] rounded-full bg-primary/10 blur-3xl" />
+        </div>
+
+        <div className="relative container mx-auto px-section-px text-center max-w-3xl">
+          {/* Eyebrow */}
+          <div className="inline-flex items-center gap-3 mb-5">
+            <div className="h-px w-8 bg-primary" />
+            <p className="uppercase tracking-[0.35em] text-xs text-secondary-foreground/50">
+              Royalty Resin
+            </p>
+            <div className="h-px w-8 bg-primary" />
+          </div>
+
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+            Our{" "}
+            <span className="text-primary">Collections</span>
           </h1>
-          <p className="mt-4 text-base md:text-lg text-secondary-foreground/80">
-            Explore our curated collections, each piece a testament to the fusion of natural beauty and artistic innovation. Find the perfect statement for your space.
+
+          {/* Divider */}
+          <div className="mt-6 flex justify-center gap-2 items-center">
+            <div className="h-px w-12 bg-secondary-foreground/20" />
+            <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+            <div className="h-px w-12 bg-secondary-foreground/20" />
+          </div>
+
+          <p className="mt-6 text-base md:text-lg text-secondary-foreground/65 leading-relaxed">
+            Explore our curated collections — each piece a testament to the
+            fusion of natural beauty and artistic innovation. Find the perfect
+            statement for your space.
           </p>
+
+          {/* Collection count badge */}
+          <div className="mt-8 inline-flex items-center gap-2 border border-secondary-foreground/15 rounded-full px-4 py-2">
+            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+            <span className="text-xs text-secondary-foreground/50 uppercase tracking-widest">
+              {categories.length} Collections Available
+            </span>
+          </div>
         </div>
       </section>
 
-      {/* 2. Category Grid Section */}
+      {/* ── CATEGORY GRID ── */}
       <section className="py-section-py px-section-px bg-background">
         <div className="container mx-auto">
-          {/* Note: Add images to /public/assets/categories/ to see the component in action. */}
           <CategoryList categories={categories} />
         </div>
       </section>
