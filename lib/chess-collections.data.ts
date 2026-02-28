@@ -1,6 +1,6 @@
 export const collections = [
     {
-        title: "black-ice",
+        title: "Black-ice",
         images: [
             { src: "/assets/chess-collections/black-ice/image1.png", alt: "black-ice resin chess set design 1" },
             { src: "/assets/chess-collections/black-ice/image2.JPG", alt: "black-ice resin chess set design 2" },
@@ -10,7 +10,7 @@ export const collections = [
         ],
     },
     {
-        title: "black-solid",
+        title: "Black-solid",
         images: [
             { src: "/assets/chess-collections/black-solid/image1.png", alt: "black-solid resin chess set design 1" },
             { src: "/assets/chess-collections/black-solid/image2.png", alt: "black-solid resin chess set design 2" },
@@ -21,7 +21,7 @@ export const collections = [
         ],
     },
     {
-        title: "blue-ice",
+        title: "Blue-ice",
         images: [
             { src: "/assets/chess-collections/blue-ice/image1.png", alt: "blue-ice resin chess set design 1" },
             { src: "/assets/chess-collections/blue-ice/image2.png", alt: "blue-ice resin chess set design 2" },

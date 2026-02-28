@@ -9,7 +9,7 @@
     --foreground: 20 14% 4%;
     /* near black */
 
-    --primary: 27 35% 25%;
+    --primary: 27 51% 50%;
     /* deep walnut brown */
     --primary-foreground: 40 10% 98%;
 
@@ -36,6 +36,7 @@
     --accent-foreground: 20 14% 4%;
   }
 }
+
 @layer components {
   .dark .bg-primary {
     @apply bg-[hsl(27deg_47.42%_29.38%)];
