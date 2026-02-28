@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SectionTitle } from "./SectionTitle";
+import { SectionTitle } from "../../components/home/SectionTitle";
 
 export function CTASection() {
     return (

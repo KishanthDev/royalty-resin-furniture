@@ -1,6 +1,7 @@
+import { CTASection } from "@/components/home/CTASection";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-import { CTASection } from "@/app/(public)/CTASection";
+
 
 export default function ContactPage() {
   return (

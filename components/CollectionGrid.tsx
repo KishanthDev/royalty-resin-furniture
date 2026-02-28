@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-interface CollectionImage {
+export interface CollectionImage {
   src: string;
   alt: string;
 }
 
-interface CollectionGridProps {
+export interface CollectionGridProps {
   images: CollectionImage[];
 }
 
