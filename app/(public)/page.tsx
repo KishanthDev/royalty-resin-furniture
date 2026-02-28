@@ -67,7 +67,8 @@ export default function HomePage() {
             subtitle="Featured Collection"
             title="Discover Our Signature Pieces"
           />
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* grid-cols-3 from mobile upward */}
+          <div className="mt-12 grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -82,6 +83,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* ── PROCESS — NEW SECTION ── */}
       <section className="py-section-py px-section-px bg-background">
@@ -157,6 +159,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <CTASection />
+
       {/* ── STATS BAND — NEW SECTION ── */}
       <section className="py-14 px-section-px bg-primary text-primary-foreground">
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -173,6 +177,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+
 
       {/* ── TESTIMONIALS — NEW SECTION ── */}
       <section className="py-section-py px-section-px bg-background">
@@ -226,7 +232,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CTASection />
     </>
   );
 }
