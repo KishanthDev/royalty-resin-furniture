@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Gem, Shield, Droplets, HeartHandshake } from "lucide-react";
 
 export function CTASection() {
   return (
@@ -37,10 +38,24 @@ export function CTASection() {
         </div>
 
         {/* Description */}
-        <p className="mt-6 text-base md:text-lg text-secondary-foreground/65 leading-relaxed max-w-xl mx-auto">
-          Whether you're a designer, architect, or a discerning homeowner — we're
-          here to bring your vision to life. Let's discuss your next project.
-        </p>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 text-left max-w-lg mx-auto">
+          <div className="flex items-start gap-4">
+            <Gem className="w-5 h-5 text-primary mt-1 shrink-0" />
+            <p className="text-secondary-foreground/70">Looks like glass</p>
+          </div>
+          <div className="flex items-start gap-4">
+            <Droplets className="w-5 h-5 text-primary mt-1 shrink-0" />
+            <p className="text-secondary-foreground/70">Feels like glass</p>
+          </div>
+          <div className="flex items-start gap-4">
+            <Shield className="w-5 h-5 text-primary mt-1 shrink-0" />
+            <p className="text-secondary-foreground/70">Strong & sturdier than glass</p>
+          </div>
+          <div className="flex items-start gap-4">
+            <HeartHandshake className="w-5 h-5 text-primary mt-1 shrink-0" />
+            <p className="text-secondary-foreground/70">But needs to be taken care of like glass</p>
+          </div>
+        </div>
 
         {/* Audience pills */}
         <div className="mt-6 flex flex-wrap justify-center gap-2">
