@@ -60,4 +60,14 @@ export const collections = [
             { src: "/assets/side-coffee-table/turquoise/image4.JPG", alt: "Turquoise resin table 4" },
         ],
     },
-];
+    {
+        title: "Flower",
+        description:
+            "Nothing stands against time especially flowers. With our special skills, time, and methods we preserve them and showcase the absolute beauty forever within the hold against time.",
+        images: [
+            { src: "/assets/side-coffee-table/flower/image1.png", alt: "Flower resin table 1" },
+            { src: "/assets/side-coffee-table/flower/image2.JPG", alt: "Flower resin table 2" },
+            { src: "/assets/side-coffee-table/flower/image3.JPG", alt: "Flower resin table 3" },
+        ],
+    }
+];  
