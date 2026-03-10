@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CollectionGrid, CollectionImage } from "@/components/CollectionGrid";
+import CollectionDescription from "@/components/CollectionDescription";
 
 interface CollectionPageProps {
     title: string;
@@ -13,6 +14,7 @@ interface CollectionPageProps {
     contactSubject: string;
     collections: {
         title: string;
+        description?: string;
         images: CollectionImage[];
     }[];
 }
@@ -103,6 +105,9 @@ export function CollectionPage({
                                 <h2 className="font-serif text-3xl md:text-4xl">
                                     {category.title}
                                 </h2>
+                                {category.description && (
+                                    <CollectionDescription description={category.description} />
+                                )}
                                 <div className="mt-4 h-[2px] w-20 bg-primary rounded-full" />
                             </div>
 

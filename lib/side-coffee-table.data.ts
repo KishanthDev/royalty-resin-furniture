@@ -1,6 +1,8 @@
 export const collections = [
     {
         title: "Abstract",
+        description:
+            "Soft pastels meet bold multicolored hues with delicate pearlescent highlights, forming a harmonious and luxurious composition. Unrepeatable in pattern and crafted by hand, each table is a unique masterpiece—created exclusively for its owner.",
         images: [
             { src: "/assets/side-coffee-table/abstract/image1.png", alt: "Abstract resin table design 1" },
             { src: "/assets/side-coffee-table/abstract/image2.png", alt: "Abstract resin table design 2" },
@@ -11,6 +13,8 @@ export const collections = [
     },
     {
         title: "Coffee",
+        description:
+            "Great conversations, meaningful moments, and lasting decisions often unfold over a perfect cup of coffee. Inspired by the rich aroma and depth of roasted beans—both energizing and comforting—this handcrafted creation captures the essence of coffee culture. Deep brown tones blend beautifully with the golden grain of teak or walnut wood, accented by a subtle “spilled milk” motif, forming a harmonious composition for true coffee lovers. Whether placed in a hallway or balcony, it quietly evokes the warmth of shared coffee moments with loved ones, time and again.",
         images: [
             { src: "/assets/side-coffee-table/coffee/image1.png", alt: "Coffee table design 1" },
             { src: "/assets/side-coffee-table/coffee/image2.JPG", alt: "Coffee table design 2" },
@@ -39,6 +43,7 @@ export const collections = [
     },
     {
         title: "Multicolor Sea",
+        description: "Inspired by imagination beyond nature, vivid multicolored seas blend with gentle, milky waves to create a visually striking masterpiece. Bold yet elegant, it commands attention and tells its own story—even in the quiet corner of a plain room.",
         images: [
             { src: "/assets/side-coffee-table/multicolor-sea/image1.png", alt: "Multicolor sea table 1" },
             { src: "/assets/side-coffee-table/multicolor-sea/image2.png", alt: "Multicolor sea table 2" },
