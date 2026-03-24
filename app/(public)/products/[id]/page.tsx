@@ -19,6 +19,7 @@ import { diningCollections } from "@/lib/dining-tables.data";
 import { chessCollections } from "@/lib/chess-collections.data";
 import { luxuryCollections } from "@/lib/luxuries.data";
 import { divineCollections } from "@/lib/divine-data";
+import { chairCollections } from "@/lib/chairs-data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 export default function ProductPage({ params }: { params: { id: string } }) {
@@ -29,6 +30,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         ...chessCollections,
         ...luxuryCollections,
         ...divineCollections,
+        ...chairCollections,
     ];
 
     const product = allProducts.find(
@@ -202,10 +204,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                                 </button>
                             </div>
 
-                            <button className="flex-1 bg-primary text-primary-foreground h-12 rounded-lg font-semibold hover:bg-primary/90 transition-all active:scale-[0.98]">
+                            <button className="flex-1 bg-primary text-primary-foreground py-4 sm:py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all active:scale-[0.98]">
                                 Add to Cart
                             </button>
-                            <button className="flex-1 bg-foreground text-background h-12 rounded-lg font-semibold hover:bg-foreground/90 transition-all active:scale-[0.98]">
+
+                            <button className="flex-1 bg-foreground text-background py-4 sm:py-3 rounded-lg font-semibold hover:bg-foreground/90 transition-all active:scale-[0.98]">
                                 Buy it Now
                             </button>
                         </div>
