@@ -20,7 +20,7 @@ import { chessCollections } from "@/lib/chess-collections.data";
 import { luxuryCollections } from "@/lib/luxuries.data";
 import { divineCollections } from "@/lib/divine-data";
 import { notFound } from "next/navigation";
-
+import Image from "next/image";
 export default function ProductPage({ params }: { params: { id: string } }) {
     // 1. Find the current product
     const allProducts = [
@@ -69,8 +69,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 <div className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
 
                     {/* ── LEFT COLUMN: IMAGE GALLERY ── */}
-                    <div className="flex flex-col-reverse lg:flex-row gap-4 lg:items-start sticky top-24 h-fit">
-                        {/* Thumbnails (Bottom on mobile, Left on desktop) */}
+                    <div className="flex flex-col-reverse lg:flex-row gap-4 lg:items-start lg:sticky lg:top-24 h-fit">                        {/* Thumbnails (Bottom on mobile, Left on desktop) */}
                         <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible py-2 lg:py-0 w-full lg:w-24 shrink-0 [&::-webkit-scrollbar]:hidden">
                             {[1, 2, 3, 4].map((item) => (
                                 <button
@@ -86,14 +85,21 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         </div>
 
                         {/* Main Image */}
-                        <div className="w-full aspect-square sm:aspect-[4/3] lg:aspect-square bg-secondary/20 rounded-xl border border-border flex items-center justify-center overflow-hidden relative group">
-                            {/* Replace this div with an actual <img /> or <Image /> */}
-                            <div className="text-muted-foreground text-lg font-medium">
-                                Main Product Image
-                            </div>
+                        <div className="w-full aspect-[4/3] sm:aspect-[4/3] lg:aspect-square bg-secondary/20 rounded-xl border border-border overflow-hidden relative group">
+
+                            <Image
+                                src={product?.imgDesktop || product?.img}
+                                alt={product?.title || "Product Image"}
+                                fill
+                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                priority
+                            />
+
                             <button className="absolute top-4 right-4 p-2 bg-background/80 backdrop-blur-md rounded-full shadow-sm hover:text-red-500 transition-colors">
                                 <Heart className="w-5 h-5" />
                             </button>
+
                         </div>
                     </div>
 
@@ -119,10 +125,10 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         {/* Pricing */}
                         <div className="mb-6 pb-6 border-b border-border">
                             <div className="flex items-end gap-3 mb-1">
-                                <span className="text-3xl font-bold tracking-tight">₹45,000</span>
-                                <span className="text-lg text-muted-foreground line-through mb-1">₹60,000</span>
+                                <span className="text-3xl font-bold tracking-tight">{product?.price}</span>
+                                <span className="text-lg text-muted-foreground line-through mb-1">{product?.priceOriginal}</span>
                                 <span className="text-sm font-semibold text-green-600 bg-green-100 px-2 py-0.5 rounded mb-1.5">
-                                    25% OFF
+                                    {product?.discountText}
                                 </span>
                             </div>
                             <p className="text-sm text-muted-foreground">(Inclusive of all taxes)</p>
