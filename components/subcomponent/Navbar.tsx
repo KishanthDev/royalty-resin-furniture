@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { ThemeToggle } from "../../components/theme/ThemeToggle";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const menuItems = [
   { name: "Side & Coffee Tables", href: "/collections/side-coffee-tables" },
@@ -48,11 +49,10 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b transition-all duration-300 ${
-          isScrolled
-            ? "border-border shadow-sm"
-            : "border-foreground/10 shadow-none"
-        }`}
+        className={`sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b transition-all duration-300 ${isScrolled
+          ? "border-border shadow-sm"
+          : "border-foreground/10 shadow-none"
+          }`}
       >
         <div className="container mx-auto flex items-center justify-between h-16">
 
@@ -61,32 +61,41 @@ export function Navbar() {
             href="/"
             className="flex items-center gap-2 group shrink-0"
           >
-            <div className="h-6 w-[3px] bg-primary rounded-full transition-transform duration-300 group-hover:scale-y-110" />
-            <span className="font-serif text-xl font-bold tracking-wide">
+
+            {/* Logo Image with a protective background pad */}
+            <div className="bg-white/90 dark:bg-white rounded-md p-1 shadow-sm flex items-center justify-center">
+              <Image
+                src="/logo/image.png"
+                alt="Royalty Resin Logo"
+                width={28}
+                height={28}
+                className="object-contain"
+              />
+            </div>
+
+            {/* Brand Name with adaptive text color */}
+            <span className="font-serif text-xl font-bold tracking-wide text-gray-900 dark:text-gray-100">
               Royalty Resin
             </span>
           </Link>
-
           {/* ── DESKTOP NAV ── */}
           <nav className="hidden lg:flex items-center gap-1">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-sm px-3 py-2 rounded-md transition-colors duration-200 group ${
-                  isActive(item.href)
-                    ? "text-primary font-medium"
-                    : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
-                }`}
+                className={`relative text-sm px-3 py-2 rounded-md transition-colors duration-200 group ${isActive(item.href)
+                  ? "text-primary font-medium"
+                  : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
+                  }`}
               >
                 {item.name}
                 {/* Animated underline */}
                 <span
-                  className={`absolute bottom-1 left-3 right-3 h-px bg-primary rounded-full transition-all duration-300 ${
-                    isActive(item.href)
-                      ? "opacity-100 scale-x-100"
-                      : "opacity-0 scale-x-0 group-hover:opacity-60 group-hover:scale-x-100"
-                  }`}
+                  className={`absolute bottom-1 left-3 right-3 h-px bg-primary rounded-full transition-all duration-300 ${isActive(item.href)
+                    ? "opacity-100 scale-x-100"
+                    : "opacity-0 scale-x-0 group-hover:opacity-60 group-hover:scale-x-100"
+                    }`}
                 />
               </Link>
             ))}
@@ -100,11 +109,10 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-sm px-3 py-2 rounded-md transition-colors duration-200 ${
-                    isActive(link.href)
-                      ? "text-primary font-medium"
-                      : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
-                  }`}
+                  className={`text-sm px-3 py-2 rounded-md transition-colors duration-200 ${isActive(link.href)
+                    ? "text-primary font-medium"
+                    : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -133,18 +141,16 @@ export function Navbar() {
       {/* ── MOBILE MENU OVERLAY ── */}
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
-          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setIsMenuOpen(false)}
         aria-hidden="true"
       />
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-72 max-w-[85vw] bg-background shadow-2xl lg:hidden flex flex-col transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 z-50 h-full w-72 max-w-[85vw] bg-background shadow-2xl lg:hidden flex flex-col transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         {/* Drawer header */}
         <div className="flex items-center justify-between px-6 h-16 border-b border-border shrink-0">
@@ -170,19 +176,17 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className={`flex items-center justify-between px-3 py-3 rounded-lg text-sm transition-colors group ${
-                isActive(item.href)
-                  ? "bg-primary/10 text-primary font-semibold"
-                  : "text-foreground/75 hover:bg-foreground/5 hover:text-foreground"
-              }`}
+              className={`flex items-center justify-between px-3 py-3 rounded-lg text-sm transition-colors group ${isActive(item.href)
+                ? "bg-primary/10 text-primary font-semibold"
+                : "text-foreground/75 hover:bg-foreground/5 hover:text-foreground"
+                }`}
             >
               {item.name}
               <ChevronRight
-                className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                  isActive(item.href)
-                    ? "text-primary"
-                    : "text-foreground/30 group-hover:translate-x-0.5"
-                }`}
+                className={`h-3.5 w-3.5 transition-transform duration-200 ${isActive(item.href)
+                  ? "text-primary"
+                  : "text-foreground/30 group-hover:translate-x-0.5"
+                  }`}
               />
             </Link>
           ))}
@@ -195,11 +199,10 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`flex items-center justify-between px-3 py-3 rounded-lg text-sm transition-colors group ${
-                  isActive(link.href)
-                    ? "bg-primary/10 text-primary font-semibold"
-                    : "text-foreground/75 hover:bg-foreground/5 hover:text-foreground"
-                }`}
+                className={`flex items-center justify-between px-3 py-3 rounded-lg text-sm transition-colors group ${isActive(link.href)
+                  ? "bg-primary/10 text-primary font-semibold"
+                  : "text-foreground/75 hover:bg-foreground/5 hover:text-foreground"
+                  }`}
               >
                 {link.name}
                 <ChevronRight className="h-3.5 w-3.5 text-foreground/30 group-hover:translate-x-0.5 transition-transform" />
