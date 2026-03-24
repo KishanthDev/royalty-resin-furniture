@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { CategoryScroll } from "./CategoryScroll";
 
 export function Hero() {
   return (
@@ -46,24 +46,12 @@ export function Hero() {
 
         {/* Subheading */}
         <p className="mt-6 text-base sm:text-lg md:text-xl text-secondary-foreground/70 max-w-2xl mx-auto leading-relaxed">
-          Innovative furniture crafted by merging premium epoxy resin with the
-          raw, timeless beauty of natural wood. Every piece is one of a kind.
+          Discover handcrafted furniture, artistic resin pieces, and luxury creations
+          made by blending premium epoxy with the timeless beauty of natural wood.
         </p>
 
-        {/* CTAs */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="/collections/all"
-            className="w-full sm:w-auto bg-primary text-primary-foreground py-3.5 px-10 font-semibold rounded-lg hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-sm"
-          >
-            Explore Collection
-          </Link>
-          <Link
-            href="/contact?subject=Custom%20Order"
-            className="w-full sm:w-auto border border-secondary-foreground/30 text-secondary-foreground py-3.5 px-10 font-semibold rounded-lg hover:bg-secondary-foreground/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-sm"
-          >
-            Custom Orders
-          </Link>
+        <div className="mt-12">
+          <CategoryScroll />
         </div>
       </div>
     </section>
