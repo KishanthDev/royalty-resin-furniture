@@ -1,19 +1,49 @@
-import { CollectionPage } from "@/components/CollectionPage";
-import { collections } from "@/lib/side-coffee-table.data";
+import HeroSection from "@/components/sections/HeroSection";
+import TextLeftSection from "@/components/sections/TextLeftSection";
+import TextRightSection from "@/components/sections/TextRightSection";
+import CtaSection from "@/components/sections/CtaSection";
+import { ProductGridSection } from "@/components/product/ProductGridSection";
+import { sideCoffeeProducts } from "@/lib/side-coffee-table.data";
 
 export default function SideCoffeePage() {
   return (
-    <CollectionPage
-      title="Side & Coffee Tables"
-      heroDescription="Thoughtfully sized tables for sofas, corners, and lounges, crafted by merging natural wood grains with premium epoxy for everyday luxury. Each piece is uniquely designed to complement your interior while standing the test of time."
-      introTitle="Crafted for Daily Rituals"
-      introDescription="From morning coffee to evening conversations, these pieces are designed to sit closer to you—lighter in scale than dining tables, but rich in character, detail, and finish."
-      customizationTitle="Made to Fit Your Space"
-      customizationDescription="Adjust diameter, height, wood species, and resin tone to match your sofa, rug, or interior palette. Perfect for homes, cafés, hotels, and lounges looking for a signature accent."
-      ctaTitle="Have a Table in Mind?"
-      ctaDescription="Share a sketch, reference image, or room photo—our team will help you translate it into a bespoke resin and wood table tailored to your dimensions and usage."
-      contactSubject="Custom Side & Coffee Table Design"
-      collections={collections}
-    />
+    <>
+      <HeroSection
+        subtitle="Royalty Resin • Collection"
+        title="Side & Coffee Tables"
+        description="Thoughtfully sized tables for sofas, corners, and lounges, crafted by merging natural wood grains with premium epoxy for everyday luxury."
+        primaryCta={{ label: "Explore Collection", href: "#products" }}
+        secondaryCta={{
+          label: "Connect With Us",
+          href: "/contact?subject=Custom Side Table",
+        }}
+      />
+
+      <TextLeftSection
+        title="Crafted for Daily Rituals"
+        description="From morning coffee to evening conversations, these pieces are designed to sit closer to you—lighter in scale but rich in character."
+      />
+
+      <section id="products" className="py-20 bg-primary/5">
+        <ProductGridSection
+          title="Explore Designs"
+          items={sideCoffeeProducts}
+        />
+      </section>
+
+      <TextRightSection
+        title="Made to Fit Your Space"
+        description="Adjust diameter, height, wood species, and resin tone to match your interior perfectly."
+      />
+
+      <CtaSection
+        title="Have a Table in Mind?"
+        description="Share your idea or reference — we’ll craft it into a bespoke table."
+        button={{
+          label: "Request Design",
+          href: "/contact?subject=Custom Side Table",
+        }}
+      />
+    </>
   );
 }
