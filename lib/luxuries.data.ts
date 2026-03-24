@@ -1,10 +1,39 @@
-export const collections = [
-    {
-        title: "Ethereal",
-        images: [
-            { src: "/assets/luxury/image1.png", alt: "resin furniture design 1" },
-            { src: "/assets/luxury/image2.jpg", alt: "resin furniture design 2" },
-            { src: "/assets/luxury/image3.png", alt: "resin furniture design 3" },
-        ],
-    },
+export const luxuryCollections = [
+  // ETHEREAL SERIES
+  {
+    id: "ethereal-1",
+    href: "/products/ethereal-celestial-bloom",
+    title: "Ethereal Celestial Bloom Table",
+    categoryName: "Luxuries",
+    categoryHref: "/collections/luxuries",
+    img: "/assets/luxury/image1.png",
+    imgDesktop: "/assets/luxury/image1.png",
+    price: "₹45,000",
+    priceOriginal: "₹60,000",
+    discountText: "25% Off",
+  },
+  {
+    id: "ethereal-2",
+    href: "/products/ethereal-nebula-flow",
+    title: "Ethereal Nebula Flow Console",
+    categoryName: "Luxuries",
+    categoryHref: "/collections/luxuries",
+    img: "/assets/luxury/image2.jpg",
+    imgDesktop: "/assets/luxury/image2.jpg",
+    price: "₹48,500",
+    priceOriginal: "₹65,000",
+    discountText: "25% Off",
+  },
+  {
+    id: "ethereal-3",
+    href: "/products/ethereal-astral-surface",
+    title: "Ethereal Astral Surface Piece",
+    categoryName: "Luxuries",
+    categoryHref: "/collections/luxuries",
+    img: "/assets/luxury/image3.png",
+    imgDesktop: "/assets/luxury/image3.png",
+    price: "₹42,000",
+    priceOriginal: "₹58,000",
+    discountText: "27% Off",
+  },
 ];

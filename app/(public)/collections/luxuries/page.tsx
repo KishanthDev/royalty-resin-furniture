@@ -1,19 +1,49 @@
-import { CollectionPage } from "@/components/CollectionPage";
-import { collections } from "@/lib/luxuries.data";
+import HeroSection from "@/components/sections/HeroSection";
+import TextLeftSection from "@/components/sections/TextLeftSection";
+import TextRightSection from "@/components/sections/TextRightSection";
+import CtaSection from "@/components/sections/CtaSection";
+import { ProductGridSection } from "@/components/product/ProductGridSection";
+import { luxuryCollections } from "@/lib/luxuries.data";
 
 export default function LuxuryFurniturePage() {
-    return (
-        <CollectionPage
-            title="Luxury Furniture"
-            heroDescription="Exquisite statements of artistry and craftsmanship. Each piece becomes a sanctuary of elegance—where heritage wood grains dance with luminous epoxy, creating heirloom moments for generations to cherish and admire."
-            introTitle="Elevate Your Space with Timeless Luxury"
-            introDescription="Commanding in presence yet intimate in spirit, our luxury furniture pieces are sculptural masterpieces that elevate every space into a sanctuary—blending organic wood elegance with crystalline resin artistry for unforgettable luxury living."
-            customizationTitle="Bespoke Luxury Tailored to You"
-            customizationDescription="Customize dimensions, wood species, resin hues, and finishes to harmonize with your vision. Perfect for luxury estates, fine residences, boutique hotels, galleries, and spaces seeking an unmistakable artistic focal point."
-            ctaTitle="Envision Your Dream Luxury Piece"
-            ctaDescription="Bring your vision to life. Share inspiration, specifications, or design preferences—our master artisans will craft a bespoke timber and resin masterpiece that transforms your space into a gallery of refined magnificence."
-            contactSubject="Custom Luxury Furniture Design"
-            collections={collections}
+  return (
+    <>
+      <HeroSection
+        subtitle="Royalty Resin • Collection"
+        title="Luxury Furniture"
+        description="Exquisite statements of artistry and craftsmanship. Each piece becomes a sanctuary of elegance—where heritage wood grains merge with luminous epoxy."
+        primaryCta={{ label: "Explore Collection", href: "#collections" }}
+        secondaryCta={{
+          label: "Connect With Us",
+          href: "/contact?subject=Custom Luxury Furniture Design",
+        }}
+      />
+
+      <TextLeftSection
+        title="Elevate Your Space with Timeless Luxury"
+        description="Commanding in presence yet intimate in spirit, our luxury furniture pieces transform interiors into artistic sanctuaries—blending organic wood with crystal-clear resin."
+      />
+
+      <section id="collections" className="py-20 bg-primary/5">
+        <ProductGridSection
+          title="Explore Designs"
+          items={luxuryCollections}
         />
-    );
+      </section>
+
+      <TextRightSection
+        title="Bespoke Luxury Tailored to You"
+        description="Customize dimensions, wood species, resin tones, and finishes to match your vision—perfect for luxury homes, hotels, and statement interiors."
+      />
+
+      <CtaSection
+        title="Envision Your Dream Piece"
+        description="Share your idea, inspiration, or requirements—our artisans will craft a one-of-a-kind masterpiece."
+        button={{
+          label: "Request Design",
+          href: "/contact?subject=Custom Luxury Furniture Design",
+        }}
+      />
+    </>
+  );
 }

@@ -1,19 +1,49 @@
-import { CollectionPage } from "@/components/CollectionPage";
-import { collections } from "@/lib/divine-data";
+import HeroSection from "@/components/sections/HeroSection";
+import TextLeftSection from "@/components/sections/TextLeftSection";
+import TextRightSection from "@/components/sections/TextRightSection";
+import CtaSection from "@/components/sections/CtaSection";
+import { ProductGridSection } from "@/components/product/ProductGridSection";
+import { divineCollections } from "@/lib/divine-data";
 
 export default function DivineCollectionPage() {
-    return (
-        <CollectionPage
-            title="Divine Collection"
-            heroDescription="Transcendent pieces where sacred geometry meets luminous artistry. Each creation embodies celestial inspiration, transforming your space into a sanctuary of divine beauty and spiritual elegance. Discover the perfect blend of craftsmanship and spiritual essence."
-            introTitle="Celestial Artistry Meets Sacred Craft"
-            introDescription="The Divine Collection transcends ordinary furnishing, offering spiritual resonance through meticulously crafted pieces. Each design channels ethereal beauty with sustainably sourced materials and transformative resin artistry."
-            customizationTitle="Bespoke Divine Creations"
-            customizationDescription="Customize dimensions, wood species, resin colors, and spiritual symbolism to reflect your personal journey. Perfect for meditation spaces, spiritual retreats, luxury homes, and those seeking transcendent artistic expression."
-            ctaTitle="Manifest Your Divine Vision"
-            ctaDescription="Share your spiritual inspiration and design aspirations. Our artisans will craft a bespoke Divine piece that elevates your space into a sanctuary of celestial beauty and profound meaning."
-            contactSubject="Custom Divine Collection Design"
-            collections={collections}
+  return (
+    <>
+      <HeroSection
+        subtitle="Royalty Resin • Collection"
+        title="Divine Collection"
+        description="Transcendent pieces where sacred inspiration meets luminous artistry—crafted to transform your space into a sanctuary of beauty and meaning."
+        primaryCta={{ label: "Explore Collection", href: "#collections" }}
+        secondaryCta={{
+          label: "Connect With Us",
+          href: "/contact?subject=Custom Divine Collection Design",
+        }}
+      />
+
+      <TextLeftSection
+        title="Celestial Artistry Meets Sacred Craft"
+        description="Each piece in the Divine Collection carries a sense of spiritual resonance—blending natural materials with radiant resin to create timeless, meaningful art."
+      />
+
+      <section id="collections" className="py-20 bg-primary/5">
+        <ProductGridSection
+          title="Explore Designs"
+          items={divineCollections}
         />
-    );
+      </section>
+
+      <TextRightSection
+        title="Bespoke Divine Creations"
+        description="Personalize dimensions, wood types, resin tones, and symbolic elements to reflect your spiritual journey and design vision."
+      />
+
+      <CtaSection
+        title="Manifest Your Divine Vision"
+        description="Share your inspiration and ideas—our artisans will craft a bespoke piece that transforms your space into a sanctuary of elegance and meaning."
+        button={{
+          label: "Request Design",
+          href: "/contact?subject=Custom Divine Collection Design",
+        }}
+      />
+    </>
+  );
 }

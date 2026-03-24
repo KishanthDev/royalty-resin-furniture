@@ -1,19 +1,49 @@
-import { CollectionPage } from "@/components/CollectionPage";
-import { collections } from "@/lib/chairs-data";
+import HeroSection from "@/components/sections/HeroSection";
+import TextLeftSection from "@/components/sections/TextLeftSection";
+import TextRightSection from "@/components/sections/TextRightSection";
+import CtaSection from "@/components/sections/CtaSection";
+import { ProductGridSection } from "@/components/product/ProductGridSection";
+import { chairCollections } from "@/lib/chairs-data";
 
 export default function ChairsPage() {
-    return (
-        <CollectionPage
-            title="Chairs"
-            heroDescription="Sculptural seating that merges comfort with artistry. Each chair becomes a statement piece—where heritage wood grains dance with luminous epoxy, creating iconic moments of elegance in every space."
-            introTitle="Sit in Artistry"
-            introDescription="Commanding in presence yet inviting in comfort, our chairs are sculptural masterpieces that elevate every setting—blending organic wood elegance with crystalline resin artistry for unforgettable seating experiences."
-            customizationTitle="Tailored to Your Comfort"
-            customizationDescription="Customize height, backrest design, wood species, and resin accents to harmonize with your interior vision. Perfect for dining sets, offices, galleries, and homes seeking distinctive artistic seating."
-            ctaTitle="Design Your Dream Chair"
-            ctaDescription="Bring your vision to life. Share inspiration, dimensions, or design preferences—our artisans will craft bespoke timber and resin seating that transforms your space into a showcase of sophistication."
-            contactSubject="Custom Chair Design"
-            collections={collections}
+  return (
+    <>
+      <HeroSection
+        subtitle="Royalty Resin • Collection"
+        title="Chairs"
+        description="Sculptural seating that merges comfort with artistry—where heritage wood grains meet luminous epoxy to create statement pieces for refined spaces."
+        primaryCta={{ label: "Explore Collection", href: "#collections" }}
+        secondaryCta={{
+          label: "Connect With Us",
+          href: "/contact?subject=Custom Chair Design",
+        }}
+      />
+
+      <TextLeftSection
+        title="Sit in Artistry"
+        description="Commanding in presence yet inviting in comfort, our chairs elevate every setting—blending organic wood with refined resin artistry."
+      />
+
+      <section id="collections" className="py-20 bg-primary/5">
+        <ProductGridSection
+          title="Explore Designs"
+          items={chairCollections}
         />
-    );
+      </section>
+
+      <TextRightSection
+        title="Tailored to Your Comfort"
+        description="Customize height, backrest, wood species, and resin accents to match your interior—perfect for homes, offices, and curated spaces."
+      />
+
+      <CtaSection
+        title="Design Your Dream Chair"
+        description="Share your inspiration and preferences—our artisans will craft bespoke seating that blends comfort with artistic expression."
+        button={{
+          label: "Request Design",
+          href: "/contact?subject=Custom Chair Design",
+        }}
+      />
+    </>
+  );
 }

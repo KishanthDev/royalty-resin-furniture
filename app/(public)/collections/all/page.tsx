@@ -2,7 +2,7 @@
 
 import { CategoryList } from "@/components/CategoryList";
 
-const categories = [
+export const categories = [
   {
     name: "Side & Coffee Tables",
     href: "/collections/side-coffee-tables",
