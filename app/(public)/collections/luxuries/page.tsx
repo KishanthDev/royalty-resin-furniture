@@ -2,7 +2,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import TextLeftSection from "@/components/sections/TextLeftSection";
 import TextRightSection from "@/components/sections/TextRightSection";
 import CtaSection from "@/components/sections/CtaSection";
-import { ProductGridSection } from "@/components/product/ProductGridSection";
+import { ProductGridSection } from "@/components/collections/CollectionGridSection";
 import { luxuryCollections } from "@/lib/luxuries.data";
 
 export default function LuxuryFurniturePage() {

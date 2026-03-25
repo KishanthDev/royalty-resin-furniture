@@ -2,7 +2,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import TextLeftSection from "@/components/sections/TextLeftSection";
 import TextRightSection from "@/components/sections/TextRightSection";
 import CtaSection from "@/components/sections/CtaSection";
-import { ProductGridSection } from "@/components/product/ProductGridSection";
+import { ProductGridSection } from "@/components/collections/CollectionGridSection";
 import { divineCollections } from "@/lib/divine-data";
 
 export default function DivineCollectionPage() {

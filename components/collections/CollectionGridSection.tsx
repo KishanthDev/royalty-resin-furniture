@@ -71,14 +71,16 @@ export const ProductGridSection: React.FC<Props> = ({
 
                                     {/* Icons */}
                                     <ul className="pointer-events-none absolute right-2 top-2 flex flex-col gap-2">
+                                        {/* Eye Icon Button */}
                                         <li className="-translate-y-8 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                                            <button className="pointer-events-auto flex h-10 w-10 items-center justify-center rounded-full bg-white shadow hover:bg-gray-100 hover:text-emerald-600">
+                                            <button className="pointer-events-auto flex h-10 w-10 items-center justify-center rounded-full bg-white text-black shadow hover:bg-gray-100 hover:text-emerald-600 transition-colors">
                                                 <Eye size={20} />
                                             </button>
                                         </li>
 
+                                        {/* Heart Icon Button */}
                                         <li className="translate-x-8 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100">
-                                            <button className="pointer-events-auto flex h-10 w-10 items-center justify-center rounded-full bg-white shadow hover:bg-gray-100 hover:text-red-500">
+                                            <button className="pointer-events-auto flex h-10 w-10 items-center justify-center rounded-full bg-white text-black shadow hover:bg-gray-100 hover:text-red-500 transition-colors">
                                                 <Heart size={20} />
                                             </button>
                                         </li>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import {
     Star,
     Truck,
@@ -7,7 +8,6 @@ import {
     ChevronRight,
     Minus,
     Plus,
-    Heart,
     ChevronDown,
     Leaf,
     MapPin,
@@ -20,9 +20,10 @@ import { chessCollections } from "@/lib/chess-collections.data";
 import { luxuryCollections } from "@/lib/luxuries.data";
 import { divineCollections } from "@/lib/divine-data";
 import { chairCollections } from "@/lib/chairs-data";
-import { notFound } from "next/navigation";
-import Image from "next/image";
-export default function ProductPage({ params }: { params: { id: string } }) {
+
+import ProductGallery from "@/components/products/ProductGallery";
+
+export default function CollectionGridSection({ params }: { params: { id: string } }) {
     // 1. Find the current product
     const allProducts = [
         ...sideCoffeeProducts,
@@ -71,39 +72,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 <div className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
 
                     {/* ── LEFT COLUMN: IMAGE GALLERY ── */}
-                    <div className="flex flex-col-reverse lg:flex-row gap-4 lg:items-start lg:sticky lg:top-24 h-fit">                        {/* Thumbnails (Bottom on mobile, Left on desktop) */}
-                        <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible py-2 lg:py-0 w-full lg:w-24 shrink-0 [&::-webkit-scrollbar]:hidden">
-                            {[1, 2, 3, 4].map((item) => (
-                                <button
-                                    key={item}
-                                    className={`relative aspect-square w-20 lg:w-full rounded-md overflow-hidden border-2 transition-all ${item === 1 ? "border-primary" : "border-transparent hover:border-primary/50"
-                                        }`}
-                                >
-                                    <div className="w-full h-full bg-secondary/40 flex items-center justify-center text-xs text-muted-foreground">
-                                        Thumb {item}
-                                    </div>
-                                </button>
-                            ))}
-                        </div>
-
-                        {/* Main Image */}
-                        <div className="w-full aspect-[4/3] sm:aspect-[4/3] lg:aspect-square bg-secondary/20 rounded-xl border border-border overflow-hidden relative group">
-
-                            <Image
-                                src={product?.imgDesktop || product?.img}
-                                alt={product?.title || "Product Image"}
-                                fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                priority
-                            />
-
-                            <button className="absolute top-4 right-4 p-2 bg-background/80 backdrop-blur-md rounded-full shadow-sm hover:text-red-500 transition-colors">
-                                <Heart className="w-5 h-5" />
-                            </button>
-
-                        </div>
-                    </div>
+                    <ProductGallery product={product} />
 
                     {/* ── RIGHT COLUMN: PRODUCT DETAILS ── */}
                     <div className="mt-10 px-2 sm:px-0 lg:mt-0">
