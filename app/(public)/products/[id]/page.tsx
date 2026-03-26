@@ -22,6 +22,7 @@ import { divineCollections } from "@/lib/divine-data";
 import { chairCollections } from "@/lib/chairs-data";
 
 import ProductGallery from "@/components/products/ProductGallery";
+import { ReviewsSection } from "@/components/products/ReviewsSection";
 
 export default function CollectionGridSection({ params }: { params: { id: string } }) {
     // 1. Find the current product
@@ -360,8 +361,12 @@ export default function CollectionGridSection({ params }: { params: { id: string
                             <span>Share this product</span>
                         </div>
 
+                 
+
                     </div>
+                    
                 </div>
+                      <ReviewsSection/>
             </div>
         </div>
     );
