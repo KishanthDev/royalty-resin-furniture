@@ -3,7 +3,7 @@ export const chessCollections = [
   {
     id: "black-ice-1",
     href: "/products/black-ice-cracked",
-    title: "Black Ice Cracked Resin Chess Set",
+    title: "Black Ice Cracked Resin Chess",
     categoryName: "Chess Collections",
     categoryHref: "/collections/chess-collections",
     img: "/assets/chess-collections/black-ice/image1.png",
