@@ -306,9 +306,25 @@ export default function CollectionGridSection({ params }: { params: { id: string
                                                         <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Product Size</td>
                                                         <td className="p-3 text-muted-foreground">4 FT x 3 FT (Custom Sizes Available)</td>
                                                     </tr>
-                                                    <tr className="hover:bg-secondary/20">
+                                                    <tr className="border-b border-border hover:bg-secondary/20">
+                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Manufacturing Process</td>
+                                                        <td className="p-3 text-muted-foreground">Handcrafted</td>
+                                                    </tr>
+                                                    <tr className="border-b border-border hover:bg-secondary/20">
                                                         <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Base Type</td>
                                                         <td className="p-3 text-muted-foreground">U-frame Powder-coated Metal Legs</td>
+                                                    </tr>
+                                                    <tr className="border-b border-border hover:bg-secondary/20">
+                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Manufacturing</td>
+                                                        <td className="p-3 text-muted-foreground">Made in the India with high-quality materials</td>
+                                                    </tr>
+                                                    <tr className="border-b border-border hover:bg-secondary/20">
+                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Delivery</td>
+                                                        <td className="p-3 text-muted-foreground">PAN India Delivery</td>
+                                                    </tr>
+                                                    <tr className="hover:bg-secondary/20">
+                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Brand</td>
+                                                        <td className="p-3 text-muted-foreground">Royality Resin</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -361,12 +377,12 @@ export default function CollectionGridSection({ params }: { params: { id: string
                             <span>Share this product</span>
                         </div>
 
-                 
+
 
                     </div>
-                    
+
                 </div>
-                      <ReviewsSection/>
+                <ReviewsSection />
             </div>
         </div>
     );
