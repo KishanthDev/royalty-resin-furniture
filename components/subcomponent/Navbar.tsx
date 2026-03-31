@@ -49,12 +49,26 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-            ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm text-foreground"
-            : "bg-gradient-to-b from-black/80 via-black/30 to-transparent border-transparent shadow-none text-white"
-          }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
+          isScrolled ? "text-foreground" : "text-white"
+        }`}
       >
-        <div className="container mx-auto flex items-center justify-between h-16">
+        {/* ── BACKGROUND LAYER 1: Scrolled Solid Background ── */}
+        <div
+          className={`absolute inset-0 bg-background/90 backdrop-blur-md border-b border-border shadow-sm transition-opacity duration-300 ${
+            isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        />
+
+        {/* ── BACKGROUND LAYER 2: Top Gradient Background ── */}
+        <div
+          className={`absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-transparent transition-opacity duration-300 ${
+            isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
+          }`}
+        />
+
+        {/* ── NAVBAR CONTENT (Sits on top of the backgrounds) ── */}
+        <div className="relative z-10 container mx-auto flex items-center justify-between h-16">
 
           {/* ── BRAND ── */}
           <Link
@@ -71,9 +85,9 @@ export function Navbar() {
               />
             </div>
 
-            {/* 2. ADDED: drop-shadow-lg to the white text state */}
-            <span className={`font-serif text-xl font-bold tracking-wide transition-colors ${isScrolled ? "text-gray-900 dark:text-gray-100" : "text-white drop-shadow-lg"
-              }`}>
+            <span className={`font-serif text-xl font-bold tracking-wide transition-colors duration-300 ${
+              isScrolled ? "text-gray-900 dark:text-gray-100" : "text-white drop-shadow-lg"
+            }`}>
               Royalty Resin
             </span>
           </Link>
@@ -84,20 +98,21 @@ export function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative text-sm px-3 py-2 rounded-md transition-colors duration-200 group ${isActive(item.href)
+                className={`relative text-sm px-3 py-2 rounded-md transition-colors duration-200 group ${
+                  isActive(item.href)
                     ? "text-primary font-medium"
                     : isScrolled
                       ? "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
-                      // 3. ADDED: drop-shadow-md to the links
                       : "text-white/90 hover:text-white hover:bg-white/10 drop-shadow-md"
-                  }`}
+                }`}
               >
                 {item.name}
                 <span
-                  className={`absolute bottom-1 left-3 right-3 h-px bg-primary rounded-full transition-all duration-300 ${isActive(item.href)
+                  className={`absolute bottom-1 left-3 right-3 h-px bg-primary rounded-full transition-all duration-300 ${
+                    isActive(item.href)
                       ? "opacity-100 scale-x-100"
                       : "opacity-0 scale-x-0 group-hover:opacity-60 group-hover:scale-x-100"
-                    }`}
+                  }`}
                 />
               </Link>
             ))}
@@ -110,13 +125,13 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-sm px-3 py-2 rounded-md transition-colors duration-200 ${isActive(link.href)
+                  className={`text-sm px-3 py-2 rounded-md transition-colors duration-200 ${
+                    isActive(link.href)
                       ? "text-primary font-medium"
                       : isScrolled
                         ? "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
-                        // 4. ADDED: drop-shadow-md to utility links
                         : "text-white/90 hover:text-white hover:bg-white/10 drop-shadow-md"
-                    }`}
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -127,11 +142,11 @@ export function Navbar() {
 
             {/* Hamburger — mobile only */}
             <button
-              className={`lg:hidden flex items-center justify-center w-9 h-9 rounded-lg border transition ${isScrolled
+              className={`lg:hidden flex items-center justify-center w-9 h-9 rounded-lg border transition-all duration-300 ${
+                isScrolled
                   ? "border-border hover:bg-foreground/5 text-foreground"
-                  // 5. ADDED: shadow to the hamburger icon box
                   : "border-white/30 hover:bg-white/20 text-white drop-shadow-md bg-black/20"
-                }`}
+              }`}
               onClick={() => setIsMenuOpen((prev) => !prev)}
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
@@ -149,16 +164,18 @@ export function Navbar() {
       {/* ── MOBILE MENU OVERLAY ── */}
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
+        className={`fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
+          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
         onClick={() => setIsMenuOpen(false)}
         aria-hidden="true"
       />
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-72 max-w-[85vw] bg-background shadow-2xl lg:hidden flex flex-col transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`fixed top-0 right-0 z-50 h-full w-72 max-w-[85vw] bg-background shadow-2xl lg:hidden flex flex-col transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         {/* Drawer header */}
         <div className="flex items-center justify-between px-6 h-16 border-b border-border shrink-0 text-foreground">
@@ -184,17 +201,19 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className={`flex items-center justify-between px-3 py-3 rounded-lg text-sm transition-colors group ${isActive(item.href)
-                ? "bg-primary/10 text-primary font-semibold"
-                : "text-foreground/75 hover:bg-foreground/5 hover:text-foreground"
-                }`}
+              className={`flex items-center justify-between px-3 py-3 rounded-lg text-sm transition-colors group ${
+                isActive(item.href)
+                  ? "bg-primary/10 text-primary font-semibold"
+                  : "text-foreground/75 hover:bg-foreground/5 hover:text-foreground"
+              }`}
             >
               {item.name}
               <ChevronRight
-                className={`h-3.5 w-3.5 transition-transform duration-200 ${isActive(item.href)
-                  ? "text-primary"
-                  : "text-foreground/30 group-hover:translate-x-0.5"
-                  }`}
+                className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                  isActive(item.href)
+                    ? "text-primary"
+                    : "text-foreground/30 group-hover:translate-x-0.5"
+                }`}
               />
             </Link>
           ))}
@@ -207,10 +226,11 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`flex items-center justify-between px-3 py-3 rounded-lg text-sm transition-colors group ${isActive(link.href)
-                  ? "bg-primary/10 text-primary font-semibold"
-                  : "text-foreground/75 hover:bg-foreground/5 hover:text-foreground"
-                  }`}
+                className={`flex items-center justify-between px-3 py-3 rounded-lg text-sm transition-colors group ${
+                  isActive(link.href)
+                    ? "bg-primary/10 text-primary font-semibold"
+                    : "text-foreground/75 hover:bg-foreground/5 hover:text-foreground"
+                }`}
               >
                 {link.name}
                 <ChevronRight className="h-3.5 w-3.5 text-foreground/30 group-hover:translate-x-0.5 transition-transform" />
