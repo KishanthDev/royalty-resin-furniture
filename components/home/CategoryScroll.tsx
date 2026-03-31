@@ -36,7 +36,7 @@ export const categories = [
 
 export function CategoryScroll() {
   return (
-    <div className="mt-10 w-full">
+    <div className="w-full">
 
       <div className="overflow-x-auto scrollbar-hide">
         <div className="flex gap-6 px-2 justify-start sm:justify-center min-w-max">

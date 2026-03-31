@@ -49,9 +49,9 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b transition-all duration-300 ${isScrolled
-          ? "border-border shadow-sm"
-          : "border-foreground/10 shadow-none"
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
+            ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm text-foreground"
+            : "bg-gradient-to-b from-black/80 via-black/30 to-transparent border-transparent shadow-none text-white"
           }`}
       >
         <div className="container mx-auto flex items-center justify-between h-16">
@@ -61,8 +61,6 @@ export function Navbar() {
             href="/"
             className="flex items-center gap-2 group shrink-0"
           >
-
-            {/* Logo Image with a protective background pad */}
             <div className="bg-white/90 dark:bg-white rounded-md p-1 shadow-sm flex items-center justify-center">
               <Image
                 src="/logo/image.png"
@@ -73,11 +71,13 @@ export function Navbar() {
               />
             </div>
 
-            {/* Brand Name with adaptive text color */}
-            <span className="font-serif text-xl font-bold tracking-wide text-gray-900 dark:text-gray-100">
+            {/* 2. ADDED: drop-shadow-lg to the white text state */}
+            <span className={`font-serif text-xl font-bold tracking-wide transition-colors ${isScrolled ? "text-gray-900 dark:text-gray-100" : "text-white drop-shadow-lg"
+              }`}>
               Royalty Resin
             </span>
           </Link>
+
           {/* ── DESKTOP NAV ── */}
           <nav className="hidden lg:flex items-center gap-1">
             {menuItems.map((item) => (
@@ -85,16 +85,18 @@ export function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={`relative text-sm px-3 py-2 rounded-md transition-colors duration-200 group ${isActive(item.href)
-                  ? "text-primary font-medium"
-                  : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
+                    ? "text-primary font-medium"
+                    : isScrolled
+                      ? "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
+                      // 3. ADDED: drop-shadow-md to the links
+                      : "text-white/90 hover:text-white hover:bg-white/10 drop-shadow-md"
                   }`}
               >
                 {item.name}
-                {/* Animated underline */}
                 <span
                   className={`absolute bottom-1 left-3 right-3 h-px bg-primary rounded-full transition-all duration-300 ${isActive(item.href)
-                    ? "opacity-100 scale-x-100"
-                    : "opacity-0 scale-x-0 group-hover:opacity-60 group-hover:scale-x-100"
+                      ? "opacity-100 scale-x-100"
+                      : "opacity-0 scale-x-0 group-hover:opacity-60 group-hover:scale-x-100"
                     }`}
                 />
               </Link>
@@ -103,15 +105,17 @@ export function Navbar() {
 
           {/* ── RIGHT SIDE ── */}
           <div className="flex items-center gap-2">
-            {/* Utility links — desktop only */}
             <div className="hidden lg:flex items-center gap-1 mr-2">
               {utilityLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className={`text-sm px-3 py-2 rounded-md transition-colors duration-200 ${isActive(link.href)
-                    ? "text-primary font-medium"
-                    : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
+                      ? "text-primary font-medium"
+                      : isScrolled
+                        ? "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
+                        // 4. ADDED: drop-shadow-md to utility links
+                        : "text-white/90 hover:text-white hover:bg-white/10 drop-shadow-md"
                     }`}
                 >
                   {link.name}
@@ -123,7 +127,11 @@ export function Navbar() {
 
             {/* Hamburger — mobile only */}
             <button
-              className="lg:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-border hover:bg-foreground/5 transition"
+              className={`lg:hidden flex items-center justify-center w-9 h-9 rounded-lg border transition ${isScrolled
+                  ? "border-border hover:bg-foreground/5 text-foreground"
+                  // 5. ADDED: shadow to the hamburger icon box
+                  : "border-white/30 hover:bg-white/20 text-white drop-shadow-md bg-black/20"
+                }`}
               onClick={() => setIsMenuOpen((prev) => !prev)}
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
@@ -153,7 +161,7 @@ export function Navbar() {
           }`}
       >
         {/* Drawer header */}
-        <div className="flex items-center justify-between px-6 h-16 border-b border-border shrink-0">
+        <div className="flex items-center justify-between px-6 h-16 border-b border-border shrink-0 text-foreground">
           <div className="flex items-center gap-2">
             <div className="h-5 w-[3px] bg-primary rounded-full" />
             <span className="font-serif text-lg font-bold">Royalty Resin</span>
