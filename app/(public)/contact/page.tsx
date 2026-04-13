@@ -45,14 +45,14 @@ export default function ContactPage() {
               {
                 icon: Mail,
                 label: "Email Us",
-                value: "contact@royaltyresin.com",
-                href: "mailto:contact@royaltyresin.com",
+                value: "Royaltyepoxysupport@gmail.com",
+                href: "mailto:Royaltyepoxysupport@gmail.com",
               },
               {
                 icon: Phone,
                 label: "Call Us",
-                value: "+91 99999 99999",
-                href: "tel:+919999999999",
+                value: "+91 90354 94485",
+                href: "tel:+919035494485",
               },
               {
                 icon: Clock,
@@ -234,22 +234,25 @@ export default function ContactPage() {
               {
                 icon: MapPin,
                 title: "Visit Our Showroom",
-                lines: ["123 Artisan Lane,", "Woodwork City, 12345", "Mumbai, India"],
+                lines: [
+                  "Main Branch: Kengeri, Bangalore",
+                  "North Karnataka Branch: Sindhanur, Raichur",
+                ],
                 href: null,
                 cta: null,
               },
               {
                 icon: Mail,
                 title: "Email Us",
-                lines: ["contact@royaltyresin.com"],
-                href: "mailto:contact@royaltyresin.com",
+                lines: ["Royaltyepoxysupport@gmail.com"],
+                href: "mailto:Royaltyepoxysupport@gmail.com",
                 cta: "Send an email",
               },
               {
                 icon: Phone,
                 title: "Call or WhatsApp",
-                lines: ["+91 99999 99999"],
-                href: "tel:+919999999999",
+                lines: ["+91 90354 94485"],
+                href: "tel:+919035494485",
                 cta: "Call now",
               },
               {
@@ -269,11 +272,22 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-sm mb-1">{title}</h3>
-                  {lines.map((line) => (
-                    <p key={line} className="text-sm text-foreground/65">
-                      {line}
-                    </p>
-                  ))}
+                  <div className="space-y-3">
+                    <div className="space-y-1">
+                      {lines.map((line, i) => {
+                        const [title, location] = line.split(":");
+
+                        return (
+                          <p key={i} className="text-sm text-foreground/80">
+                            <span className="font-semibold text-foreground">
+                              {title}:
+                            </span>{" "}
+                            <span className="text-foreground/60">{location}</span>
+                          </p>
+                        );
+                      })}
+                    </div>
+                  </div>
                   {href && cta && (
                     <Link
                       href={href}

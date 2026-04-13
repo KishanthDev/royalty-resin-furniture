@@ -104,25 +104,25 @@ export function Footer() {
             <ul className="grid grid-cols-1 sm:grid-cols-1 gap-4 text-sm">
               <li>
                 <a
-                  href="mailto:hello@royaltyresin.com"
+                  href="mailto:Royaltyepoxysupport@gmail.com"
                   className="flex items-start gap-3 text-secondary-foreground/65 hover:text-primary transition-colors group"
                 >
                   <Mail className="h-4 w-4 mt-0.5 shrink-0 group-hover:text-primary" />
-                  hello@royaltyresin.com
+                  Royaltyepoxysupport@gmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+919035494485"
                   className="flex items-start gap-3 text-secondary-foreground/65 hover:text-primary transition-colors group"
                 >
                   <Phone className="h-4 w-4 mt-0.5 shrink-0 group-hover:text-primary" />
-                  +91 99999 99999
+                  +91 90354 94485
                 </a>
               </li>
               <li className="flex items-start gap-3 text-secondary-foreground/65">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                <span>Mumbai, Maharashtra, India</span>
+                <span>Kengeri, Bangalore, India</span>
               </li>
             </ul>
 
