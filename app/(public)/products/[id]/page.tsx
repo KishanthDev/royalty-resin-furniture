@@ -47,7 +47,7 @@ export default function CollectionGridSection({ params }: { params: { id: string
 
                 {/* ── DYNAMIC BREADCRUMBS ── */}
                 {/* ── DYNAMIC BREADCRUMBS ── */}
-                <nav className="flex items-center text-sm text-muted-foreground mb-8 overflow-x-auto whitespace-nowrap pb-2">
+                <nav className="flex items-center text-sm text-muted-foreground mb-8 mt-12 overflow-x-auto whitespace-nowrap pb-2">
                     <Link href="/" className="hover:text-primary transition-colors shrink-0">
                         Home
                     </Link>
