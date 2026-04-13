@@ -1,3 +1,5 @@
+import { Images } from "lucide-react";
+
 export const chessCollections = [
   // ICEY OBSIDIAN SERIES
   {
@@ -165,5 +167,43 @@ export const chessCollections = [
     price: "₹3999",
     priceOriginal: "₹4499",
     discountText: "11% Off",
+  },
+  //icey-amethyst-series
+  {
+    id: "icey-amethyst",
+    href: "/products/icey-amethyst-chess",
+    title: "Icey Amethyst Chess",
+    categoryName: "Chess Collections",
+    categoryHref: "/collections/chess-collections",
+    img: "/assets/chess-collections/icey-amethyst/main.png",
+    imgDesktop: "/assets/chess-collections/icey-amethyst/main.png",
+    images: [
+      "/assets/chess-collections/icey-amethyst/preview1.JPG",
+      "/assets/chess-collections/icey-amethyst/preview2.JPG",
+      "/assets/chess-collections/icey-amethyst/preview3.JPG",
+      "/assets/chess-collections/icey-amethyst/preview4.png",
+    ],
+    price: "₹3999",
+    priceOriginal: "₹4499",
+    discountText: "11% Off",
+  },
+  //solid-black-series
+  {
+    id: "solid-black",
+    href: "/products/solid-black-chess",
+    title: "Solid Black Chess",
+    categoryName: "Chess Collections",
+    categoryHref: "/collections/chess-collections",
+    img: "/assets/chess-collections/solid-black/main.png",
+    imgDesktop: "/assets/chess-collections/solid-black/main.png",
+    images: [
+      "/assets/chess-collections/solid-black/preview1.jpg",
+      "/assets/chess-collections/solid-black/preview2.jpg",
+      "/assets/chess-collections/solid-black/preview3.jpg",
+      "/assets/chess-collections/solid-black/preview4.jpg",
+    ],
+    price: "₹7999",
+    priceOriginal: "₹8499",
+    discountText: "5% Off",
   },
 ];
