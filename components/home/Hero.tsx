@@ -29,7 +29,7 @@ export function Hero() {
      <div className="relative z-10 container mx-auto px-section-px pb-8 md:pb-12 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
         
         <h1 className="sr-only">
-          Royalty Resin: Premium Epoxy & Natural Wood Furniture
+          Royalty Resin: Premium Furniture Interiors & Decors
         </h1>
 
         {/* LEFT: MINIMALIST TEXT BLOCK */}
@@ -51,7 +51,7 @@ export function Hero() {
               className="h-[1px] bg-primary/90" 
             />
             <p className="uppercase tracking-[0.4em] text-[10px] sm:text-xs text-white/90 font-medium">
-              Royalty Resin • Interiors
+              Royalty Resin • Interiors • Decors
             </p>
           </div>
           
