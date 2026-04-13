@@ -41,6 +41,11 @@ export default function CollectionGridSection({ params }: { params: { id: string
 
     if (!product) return notFound();
 
+    const isChessProduct =
+        chessCollections.some((c) => c.href === product.href) ||
+        product?.categoryName?.toLowerCase().includes("chess") ||
+        product?.title?.toLowerCase().includes("chess");
+
     return (
         <div className="min-h-screen bg-background text-foreground py-10 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
@@ -73,7 +78,7 @@ export default function CollectionGridSection({ params }: { params: { id: string
                 <div className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
 
                     {/* ── LEFT COLUMN: IMAGE GALLERY ── */}
-                    <ProductGallery product={product} />
+                    <ProductGallery product={product} noThumbnail={!isChessProduct} />
 
                     {/* ── RIGHT COLUMN: PRODUCT DETAILS ── */}
                     <div className="mt-10 px-2 sm:px-0 lg:mt-0">
