@@ -126,7 +126,7 @@ export default function CollectionGridSection({ params }: { params: { id: string
                         </div>
 
                         {/* Variants: Size */}
-                        <div className="mb-8">
+                        {/* <div className="mb-8">
                             <div className="flex justify-between items-center mb-3">
                                 <h3 className="text-sm font-semibold">Select Size (LxWxH)</h3>
                                 <button className="text-sm text-primary underline">Size Guide</button>
@@ -144,10 +144,10 @@ export default function CollectionGridSection({ params }: { params: { id: string
                                     </button>
                                 ))}
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Variants: Resin Color */}
-                        <div className="mb-8">
+                        {/* <div className="mb-8">
                             <h3 className="text-sm font-semibold mb-3">Resin Color</h3>
                             <div className="flex gap-3">
                                 {[
@@ -164,7 +164,7 @@ export default function CollectionGridSection({ params }: { params: { id: string
                                     />
                                 ))}
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Quantity & Actions */}
                         <div className="flex flex-col sm:flex-row gap-4 mb-8">
