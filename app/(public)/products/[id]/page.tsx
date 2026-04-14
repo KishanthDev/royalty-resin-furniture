@@ -101,10 +101,17 @@ export default function CollectionGridSection({ params }: { params: { id: string
                         <div className="mb-6 pb-6 border-b border-border">
                             <div className="flex items-end gap-3 mb-1">
                                 <span className="text-3xl font-bold tracking-tight">{product?.price}</span>
-                                <span className="text-lg text-muted-foreground line-through mb-1">{product?.priceOriginal}</span>
-                                <span className="text-sm font-semibold text-green-600 bg-green-100 px-2 py-0.5 rounded mb-1.5">
-                                    {product?.discountText}
-                                </span>
+                                {product?.priceOriginal && (
+                                    <span className="text-lg text-muted-foreground line-through mb-1">
+                                        {product.priceOriginal}
+                                    </span>
+                                )}
+
+                                {product?.discountText && (
+                                    <span className="text-sm font-semibold text-green-600 bg-green-100 px-2 py-0.5 rounded mb-1.5">
+                                        {product.discountText}
+                                    </span>
+                                )}
                             </div>
                             <p className="text-sm text-muted-foreground">(Inclusive of all taxes)</p>
                         </div>

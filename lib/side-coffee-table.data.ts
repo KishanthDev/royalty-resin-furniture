@@ -167,14 +167,14 @@ export const sideCoffeeProducts: ProductItem[] = [
     title: "Moon Resin Table",
     categoryName: "Side & Coffee Tables",
     categoryHref: "/collections/side-coffee-tables",
-    img: "/assets/side-coffee-table/moon/image1.png",
-    imgDesktop: "/assets/side-coffee-table/moon/image1.png",
+    img: "/assets/side-coffee-table/moon/image6.png",
+    imgDesktop: "/assets/side-coffee-table/moon/image6.png",
     images: [
       "/assets/side-coffee-table/moon/image2.png",
       "/assets/side-coffee-table/moon/image3.jpg",
       "/assets/side-coffee-table/moon/image4.png",
       "/assets/side-coffee-table/moon/image5.png",
-      "/assets/side-coffee-table/moon/image6.png",
+      "/assets/side-coffee-table/moon/image1.png",
     ],
     price: "₹11,999",
     Specifications: {

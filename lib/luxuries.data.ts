@@ -3,9 +3,9 @@ import { ProductItem } from "./types";
 export const luxuryCollections: ProductItem[] = [
   // ETHEREAL SERIES
   {
-    id: "ethereal-1",
-    href: "/products/ethereal-celestial-bloom",
-    title: "Ethereal Celestial Bloom Table",
+    id: "luxors",
+    href: "/products/luxors",
+    title: "Luxors",
     categoryName: "Luxuries",
     categoryHref: "/collections/luxuries",
     img: "/assets/luxury/image1.png",
