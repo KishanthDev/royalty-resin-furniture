@@ -51,8 +51,8 @@ export const sideCoffeeProducts: ProductItem[] = [
     },
   },
   {
-    id: "abstract-2",
-    href: "/products/abstract-2",
+    id: "abstract-3",
+    href: "/products/abstract-3",
     title: "Abstract Table",
     categoryName: "Side & Coffee Tables",
     categoryHref: "/collections/side-coffee-tables",
