@@ -1,8 +1,5 @@
-// /lib/data.ts
 
-import { Product } from "./types";
-
-const products: Product[] = [
+const products = [
   {
     id: "1",
     name: "Lava Forge Dining Table",
@@ -37,21 +34,3 @@ const products: Product[] = [
     inStock: true
   },
 ];
-
-
-// Return all products
-export function getAllProducts(): Product[] {
-  return products;
-}
-
-
-// Return featured products (first 3 for homepage)
-export function getFeaturedProducts(): Product[] {
-  return products.slice(0, 3);
-}
-
-
-// Get single product by slug
-export function getProductBySlug(slug: string): Product | undefined {
-  return products.find((product) => product.slug === slug);
-}

@@ -1,14 +1,28 @@
-// /lib/types.ts
-
-export interface Product {
+export type ProductItem = {
   id: string;
-  name: string;
-  slug: string;
-  description?: string;
-  price?: number;
-  category: string;
-  images: string[]; // Example: ["/products/product1.jpg"]
-  inStock?: boolean;
-  createdAt?: string;
-  updatedAt?: string;
-}
+  href: string;
+  title: string;
+  categoryName: string;
+  categoryHref: string;
+  img: string;
+  imgDesktop: string;
+  images?: string[];
+  price?: string;
+  priceOriginal?: string;
+  discountText?: string;
+
+  // ✅ ADD THIS
+  Specifications?: Record<string, string>;
+};
+
+export type Props = {
+    title: string;
+    viewMoreLink?: string;
+    items: ProductItem[];
+};
+
+
+type Specification = {
+  key: string;
+  value: string;
+};

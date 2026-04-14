@@ -1,4 +1,6 @@
-export const luxuryCollections = [
+import { ProductItem } from "./types";
+
+export const luxuryCollections: ProductItem[] = [
   // ETHEREAL SERIES
   {
     id: "ethereal-1",
@@ -8,32 +10,25 @@ export const luxuryCollections = [
     categoryHref: "/collections/luxuries",
     img: "/assets/luxury/image1.png",
     imgDesktop: "/assets/luxury/image1.png",
-    price: "₹45,000",
-    priceOriginal: "₹60,000",
-    discountText: "25% Off",
-  },
-  {
-    id: "ethereal-2",
-    href: "/products/ethereal-nebula-flow",
-    title: "Ethereal Nebula Flow Console",
-    categoryName: "Luxuries",
-    categoryHref: "/collections/luxuries",
-    img: "/assets/luxury/image2.jpg",
-    imgDesktop: "/assets/luxury/image2.jpg",
-    price: "₹48,500",
-    priceOriginal: "₹65,000",
-    discountText: "25% Off",
-  },
-  {
-    id: "ethereal-3",
-    href: "/products/ethereal-astral-surface",
-    title: "Ethereal Astral Surface Piece",
-    categoryName: "Luxuries",
-    categoryHref: "/collections/luxuries",
-    img: "/assets/luxury/image3.png",
-    imgDesktop: "/assets/luxury/image3.png",
-    price: "₹42,000",
-    priceOriginal: "₹58,000",
-    discountText: "27% Off",
-  },
+    price: "₹48,000",
+    images: [
+      "/assets/luxury/image2.jpg",
+      "/assets/luxury/image3.png",
+    ],
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood with Crystal-clear Epoxy Resin",
+      "Size": "Diameter 36 inches",
+      "Thickness": "Maximum at center 15 inches",
+      "Items": "Only Table with Assembly Accessories",
+      "Color": "Natural Wood Tone with Transparent Epoxy (Customizable) Request for color change or additional images",
+      "Design/Style": "Live-edge Epoxy Resin Table, Modern Industrial, Handcrafted",
+      "Weight": "Varies (Acacia Wood + Metal Legs)",
+      "Usage": "Home, Office, Studio, Dining Table, Decorative Table",
+      "Manufacturing Process": "Handcrafted",
+      "Base Type": "U-frame Powder-coated Metal Legs",
+      "Manufacturing": "Made in the India with high-quality materials",
+      "Delivery": "PAN India Delivery",
+      "Brand": "Royality Resin"
+    }
+  }
 ];

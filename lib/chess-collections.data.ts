@@ -1,6 +1,6 @@
-import { Images } from "lucide-react";
+import { ProductItem } from "./types";
 
-export const chessCollections = [
+export const chessCollections: ProductItem[] = [
   // ICEY OBSIDIAN SERIES
   {
     id: "icey-obsedion",
@@ -19,6 +19,21 @@ export const chessCollections = [
     price: "₹3999",
     priceOriginal: "₹4499",
     discountText: "11% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "1.8KG - 3 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "11’’ x 11’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "3/4’’ – 1 1/2’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   // ICEY GLACIER SERIES
   {
@@ -37,6 +52,21 @@ export const chessCollections = [
     price: "3999",
     priceOriginal: "₹4499",
     discountText: "11% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "1.8KG - 3 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "11’’ x 11’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "3/4’’ – 1 1/2’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   // ICEY EMERALD SERIES
   {
@@ -57,6 +87,21 @@ export const chessCollections = [
     price: "₹3999",
     priceOriginal: "₹4499",
     discountText: "11% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "1.8KG - 3 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "11’’ x 11’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "3/4’’ – 1 1/2’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   //ICEY HELIOS SERIES
   {
@@ -83,6 +128,21 @@ export const chessCollections = [
     price: "₹3999",
     priceOriginal: "₹4499",
     discountText: "11% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "1.8KG - 3 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "11’’ x 11’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "3/4’’ – 1 1/2’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   // ICEY ROSE SERIES
   {
@@ -105,6 +165,21 @@ export const chessCollections = [
     price: "₹3999",
     priceOriginal: "₹4499",
     discountText: "11% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "1.8KG - 3 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "11’’ x 11’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "3/4’’ – 1 1/2’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   //SAPPHIRE SERIES
   {
@@ -124,6 +199,21 @@ export const chessCollections = [
     price: "₹7999",
     priceOriginal: "₹8499",
     discountText: "5% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "2.5KG - 4 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "14’’ x 14’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "2’’ – 3’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   // JADE SERIES
   {
@@ -141,6 +231,21 @@ export const chessCollections = [
     price: "₹7999",
     priceOriginal: "₹8499",
     discountText: "5% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "2.5KG - 4 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "14’’ x 14’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "2’’ – 3’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   // ICEY RUBY SERIES
   {
@@ -154,6 +259,21 @@ export const chessCollections = [
     price: "₹3999",
     priceOriginal: "₹4499",
     discountText: "11% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "1.8KG - 3 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "11’’ x 11’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "3/4’’ – 1 1/2’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   //ICY WHITE WALKER SERIES
   {
@@ -167,6 +287,21 @@ export const chessCollections = [
     price: "₹3999",
     priceOriginal: "₹4499",
     discountText: "11% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: Assorted Chess Men Included (1 set Transparent Resin, 1 set Matching Board Tone). For Color Change Requests, Please Contact Us",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "1.8KG - 3 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "11’’ x 11’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "3/4’’ – 1 1/2’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   //icey-amethyst-series
   {
@@ -186,6 +321,21 @@ export const chessCollections = [
     price: "₹3999",
     priceOriginal: "₹4499",
     discountText: "11% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "1.8KG - 3 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "11’’ x 11’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "3/4’’ – 1 1/2’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
   //solid-black-series
   {
@@ -205,5 +355,20 @@ export const chessCollections = [
     price: "₹7999",
     priceOriginal: "₹8499",
     discountText: "5% Off",
+    Specifications: {
+      "Wood/Material": "Live-edge Acacia Wood Chess Board with Crystal-clear Epoxy Resin Finish",
+      "Items": "Complete Chess Set (Board + Chess Pieces + Assembly Accessories)",
+      "Color": "Chess Pieces: 1 set Transparent Resin, 1 set Matching Board Tone",
+      "Design/Style": "Luxury Epoxy Resin Chess Board, Modern Industrial, Handcrafted Strategy Set",
+      "Special Metal Decorated Chessmen": "1 Premium Metal Chessmen Set Matching Board + 1 Plain Set (Optional Upgrade 999/-)",
+      "Weight": "2.5KG - 4 KG (Varies by Chess Board Design)",
+      "Usage": "Chess Play, Home Decor, Office Display, Strategy Practice, Gift Item",
+      "Product Size": "14’’ x 14’’ (Standard Compact Chess Board Size)",
+      "THICKNESS": "2’’ – 3’’ (Solid Chess Board Build)",
+      "Manufacturing Process": "Handcrafted Chess Board & Pieces",
+      "Manufacturing": "Made in India with High-Quality Chess Craftsmanship",
+      "Delivery": "PAN India Delivery Available",
+      "Brand": "Royality Resin Chess Collection"
+    }
   },
 ];

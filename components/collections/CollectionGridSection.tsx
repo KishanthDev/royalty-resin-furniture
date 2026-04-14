@@ -1,22 +1,6 @@
 import React from "react";
 import { Eye, Heart } from "lucide-react";
-
-export type ProductItem = {
-    id: string;
-    href: string;
-    title: string;
-    img: string;
-    imgDesktop: string;
-    price: string;
-    priceOriginal?: string;
-    discountText?: string;
-};
-
-type Props = {
-    title: string;
-    viewMoreLink?: string;
-    items: ProductItem[];
-};
+import type { Props } from "@/lib/types";
 
 export const ProductGridSection: React.FC<Props> = ({
     title,

@@ -20,13 +20,14 @@ import { chessCollections } from "@/lib/chess-collections.data";
 import { luxuryCollections } from "@/lib/luxuries.data";
 import { divineCollections } from "@/lib/divine-data";
 import { chairCollections } from "@/lib/chairs-data";
+import type { ProductItem } from "@/lib/types";
 
 import ProductGallery from "@/components/products/ProductGallery";
 import { ReviewsSection } from "@/components/products/ReviewsSection";
 
 export default function CollectionGridSection({ params }: { params: { id: string } }) {
     // 1. Find the current product
-    const allProducts = [
+    const allProducts: ProductItem[] = [
         ...sideCoffeeProducts,
         ...diningCollections,
         ...chessCollections,
@@ -41,10 +42,7 @@ export default function CollectionGridSection({ params }: { params: { id: string
 
     if (!product) return notFound();
 
-    const isChessProduct =
-        chessCollections.some((c) => c.href === product.href) ||
-        product?.categoryName?.toLowerCase().includes("chess") ||
-        product?.title?.toLowerCase().includes("chess");
+    const isImagesEmpty = !product?.images || product.images.length === 0;
 
     return (
         <div className="min-h-screen bg-background text-foreground py-10 px-4 sm:px-6 lg:px-8">
@@ -78,7 +76,7 @@ export default function CollectionGridSection({ params }: { params: { id: string
                 <div className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
 
                     {/* ── LEFT COLUMN: IMAGE GALLERY ── */}
-                    <ProductGallery product={product} noThumbnail={!isChessProduct} />
+                    <ProductGallery product={product} noThumbnail={isImagesEmpty} />
 
                     {/* ── RIGHT COLUMN: PRODUCT DETAILS ── */}
                     <div className="mt-10 px-2 sm:px-0 lg:mt-0">
@@ -278,60 +276,77 @@ export default function CollectionGridSection({ params }: { params: { id: string
                                     <div className="pb-5 animate-in fade-in slide-in-from-top-2">
                                         <div className="overflow-hidden rounded-md border border-border">
                                             <table className="w-full text-sm text-left border-collapse">
-                                                <tbody>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border w-1/3 sm:w-1/4">Wood/Material</td>
-                                                        <td className="p-3 text-muted-foreground">Live-edge Acacia Wood with Crystal-clear Epoxy Resin</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Dimension</td>
-                                                        <td className="p-3 text-muted-foreground">4 FT L x 3 FT W x 2.5 H</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Items</td>
-                                                        <td className="p-3 text-muted-foreground">Only Table with Assembly Accessories</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Color</td>
-                                                        <td className="p-3 text-muted-foreground">Natural Wood Tone with Transparent Epoxy (Customizable)</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Design/Style</td>
-                                                        <td className="p-3 text-muted-foreground">Live-edge Epoxy Resin Table, Modern Industrial, Handcrafted</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Weight</td>
-                                                        <td className="p-3 text-muted-foreground">Varies (Acacia Wood + Metal Legs)</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Usage</td>
-                                                        <td className="p-3 text-muted-foreground">Home, Office, Studio, Dining Table, Decorative Table</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Product Size</td>
-                                                        <td className="p-3 text-muted-foreground">4 FT x 3 FT (Custom Sizes Available)</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Manufacturing Process</td>
-                                                        <td className="p-3 text-muted-foreground">Handcrafted</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Base Type</td>
-                                                        <td className="p-3 text-muted-foreground">U-frame Powder-coated Metal Legs</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Manufacturing</td>
-                                                        <td className="p-3 text-muted-foreground">Made in the India with high-quality materials</td>
-                                                    </tr>
-                                                    <tr className="border-b border-border hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Delivery</td>
-                                                        <td className="p-3 text-muted-foreground">PAN India Delivery</td>
-                                                    </tr>
-                                                    <tr className="hover:bg-secondary/20">
-                                                        <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Brand</td>
-                                                        <td className="p-3 text-muted-foreground">Royality Resin</td>
-                                                    </tr>
-                                                </tbody>
+                                                {product?.Specifications && Object.keys(product.Specifications).length > 0 ? (
+                                                    <tbody>
+                                                        {product?.Specifications &&
+                                                            Object.entries(product.Specifications).map(([key, value], index) => (
+                                                                <tr
+                                                                    key={index}
+                                                                    className="border-b border-border hover:bg-secondary/20"
+                                                                >
+                                                                    <td className="p-3 font-semibold bg-secondary/30 border-r border-border w-1/3 sm:w-1/4">
+                                                                        {key}
+                                                                    </td>
+                                                                    <td className="p-3 text-muted-foreground">
+                                                                        {value}
+                                                                    </td>
+                                                                </tr>
+                                                            ))}
+                                                    </tbody>) : (
+                                                    <tbody>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border w-1/3 sm:w-1/4">Wood/Material</td>
+                                                            <td className="p-3 text-muted-foreground">Live-edge Acacia Wood with Crystal-clear Epoxy Resin</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Dimension</td>
+                                                            <td className="p-3 text-muted-foreground">4 FT L x 3 FT W x 2.5 H</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Items</td>
+                                                            <td className="p-3 text-muted-foreground">Only Table with Assembly Accessories</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Color</td>
+                                                            <td className="p-3 text-muted-foreground">Natural Wood Tone with Transparent Epoxy (Customizable)</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Design/Style</td>
+                                                            <td className="p-3 text-muted-foreground">Live-edge Epoxy Resin Table, Modern Industrial, Handcrafted</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Weight</td>
+                                                            <td className="p-3 text-muted-foreground">Varies (Acacia Wood + Metal Legs)</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Usage</td>
+                                                            <td className="p-3 text-muted-foreground">Home, Office, Studio, Dining Table, Decorative Table</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Product Size</td>
+                                                            <td className="p-3 text-muted-foreground">4 FT x 3 FT (Custom Sizes Available)</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Manufacturing Process</td>
+                                                            <td className="p-3 text-muted-foreground">Handcrafted</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Base Type</td>
+                                                            <td className="p-3 text-muted-foreground">U-frame Powder-coated Metal Legs</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Manufacturing</td>
+                                                            <td className="p-3 text-muted-foreground">Made in the India with high-quality materials</td>
+                                                        </tr>
+                                                        <tr className="border-b border-border hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Delivery</td>
+                                                            <td className="p-3 text-muted-foreground">PAN India Delivery</td>
+                                                        </tr>
+                                                        <tr className="hover:bg-secondary/20">
+                                                            <td className="p-3 font-semibold bg-secondary/30 border-r border-border">Brand</td>
+                                                            <td className="p-3 text-muted-foreground">Royality Resin</td>
+                                                        </tr>
+                                                    </tbody>)}
                                             </table>
                                         </div>
                                     </div>
