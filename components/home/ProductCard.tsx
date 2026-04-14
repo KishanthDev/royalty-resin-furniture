@@ -1,10 +1,10 @@
 // ProductCard.tsx
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@/lib/types";
+import type { ProductCard } from "@/lib/types";
 
 interface ProductCardProps {
-    product: Product;
+    product: ProductCard;
 }
 
 export function ProductCard({ product }: ProductCardProps) {

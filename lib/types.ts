@@ -26,3 +26,9 @@ type Specification = {
   key: string;
   value: string;
 };
+
+export interface ProductCard {
+    images: string[];
+    name: string;
+    category: string;
+}

@@ -1,5 +1,5 @@
 
-const products = [
+export const products = [
   {
     id: "1",
     name: "Lava Forge Dining Table",

@@ -2,12 +2,12 @@ import { Hero } from "../../components/home/Hero";
 import { ProductCard } from "../../components/home/ProductCard";
 import { SectionTitle } from "../../components/home/SectionTitle";
 import { CTASection } from "@/components/home/CTASection";
-import { getFeaturedProducts } from "@/lib/data";
+import { products } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePage() {
-  const featuredProducts = getFeaturedProducts();
+  const featuredProducts = products.slice(0, 3);
 
   return (
     <>
