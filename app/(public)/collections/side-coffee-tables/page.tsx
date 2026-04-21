@@ -1,8 +1,10 @@
-import HeroSection from "@/components/sections/HeroSection";
-import TextLeftSection from "@/components/sections/TextLeftSection";
-import TextRightSection from "@/components/sections/TextRightSection";
-import CtaSection from "@/components/sections/CtaSection";
-import { ProductGridSection } from "@/components/collections/CollectionGridSection";
+import {
+  HeroSection,
+  TextLeftSection,
+  TextRightSection,
+  CtaSection,
+  CollectionGridSection
+} from "@/components/collections";
 import { sideCoffeeProducts } from "@/lib/data/side-coffee-table.data";
 
 export default function SideCoffeePage() {
@@ -25,7 +27,7 @@ export default function SideCoffeePage() {
       />
 
       <section id="products" className="py-20 bg-primary/5">
-        <ProductGridSection
+        <CollectionGridSection
           title="Explore Designs"
           items={sideCoffeeProducts}
         />

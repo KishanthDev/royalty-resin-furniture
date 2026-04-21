@@ -3,7 +3,7 @@ import { Eye, Heart } from "lucide-react";
 import type { Props } from "@/lib/types";
 import { getDiscountText } from "@/app/utils/discount";
 
-export const ProductGridSection: React.FC<Props> = ({
+export const CollectionGridSection: React.FC<Props> = ({
     title,
     viewMoreLink,
     items,

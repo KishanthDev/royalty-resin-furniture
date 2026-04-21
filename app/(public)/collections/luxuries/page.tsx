@@ -1,8 +1,10 @@
-import HeroSection from "@/components/sections/HeroSection";
-import TextLeftSection from "@/components/sections/TextLeftSection";
-import TextRightSection from "@/components/sections/TextRightSection";
-import CtaSection from "@/components/sections/CtaSection";
-import { ProductGridSection } from "@/components/collections/CollectionGridSection";
+import {
+  HeroSection,
+  TextLeftSection,
+  TextRightSection,
+  CtaSection,
+  CollectionGridSection
+} from "@/components/collections";
 import { luxuryCollections } from "@/lib/data/luxuries.data";
 
 export default function LuxuryFurniturePage() {
@@ -25,7 +27,7 @@ export default function LuxuryFurniturePage() {
       />
 
       <section id="collections" className="py-20 bg-primary/5">
-        <ProductGridSection
+        <CollectionGridSection
           title="Explore Designs"
           items={luxuryCollections}
         />
