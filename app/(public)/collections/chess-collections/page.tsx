@@ -3,7 +3,7 @@ import TextLeftSection from "@/components/sections/TextLeftSection";
 import TextRightSection from "@/components/sections/TextRightSection";
 import CtaSection from "@/components/sections/CtaSection";
 import { ProductGridSection } from "@/components/collections/CollectionGridSection";
-import { chessCollections } from "@/lib/chess-collections.data";
+import { chessCollections } from "@/lib/data/chess-collections.data";
 
 export default function ChessCollectionsPage() {
   return (

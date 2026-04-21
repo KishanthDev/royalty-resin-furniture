@@ -3,7 +3,7 @@ import TextLeftSection from "@/components/sections/TextLeftSection";
 import TextRightSection from "@/components/sections/TextRightSection";
 import CtaSection from "@/components/sections/CtaSection";
 import { ProductGridSection } from "@/components/collections/CollectionGridSection";
-import { diningCollections } from "@/lib/dining-tables.data";
+import { diningCollections } from "@/lib/data/dining-tables.data";
 
 export default function DiningTablesPage() {
   return (

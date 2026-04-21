@@ -3,7 +3,7 @@ import TextLeftSection from "@/components/sections/TextLeftSection";
 import TextRightSection from "@/components/sections/TextRightSection";
 import CtaSection from "@/components/sections/CtaSection";
 import { ProductGridSection } from "@/components/collections/CollectionGridSection";
-import { sideCoffeeProducts } from "@/lib/side-coffee-table.data";
+import { sideCoffeeProducts } from "@/lib/data/side-coffee-table.data";
 
 export default function SideCoffeePage() {
   return (

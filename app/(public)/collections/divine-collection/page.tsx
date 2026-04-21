@@ -3,7 +3,7 @@ import TextLeftSection from "@/components/sections/TextLeftSection";
 import TextRightSection from "@/components/sections/TextRightSection";
 import CtaSection from "@/components/sections/CtaSection";
 import { ProductGridSection } from "@/components/collections/CollectionGridSection";
-import { divineCollections } from "@/lib/divine-data";
+import { divineCollections } from "@/lib/data/divine-data";
 
 export default function DivineCollectionPage() {
   return (

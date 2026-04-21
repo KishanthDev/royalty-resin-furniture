@@ -14,16 +14,17 @@ import {
     Share2,
 } from "lucide-react";
 
-import { sideCoffeeProducts } from "@/lib/side-coffee-table.data";
-import { diningCollections } from "@/lib/dining-tables.data";
-import { chessCollections } from "@/lib/chess-collections.data";
-import { luxuryCollections } from "@/lib/luxuries.data";
-import { divineCollections } from "@/lib/divine-data";
-import { chairCollections } from "@/lib/chairs-data";
+import { sideCoffeeProducts } from "@/lib/data/side-coffee-table.data";
+import { diningCollections } from "@/lib/data/dining-tables.data";
+import { chessCollections } from "@/lib/data/chess-collections.data";
+import { luxuryCollections } from "@/lib/data/luxuries.data";
+import { divineCollections } from "@/lib/data/divine-data";
+import { chairCollections } from "@/lib/data/chairs-data";
 import type { ProductItem } from "@/lib/types";
 
 import ProductGallery from "@/components/products/ProductGallery";
 import { ReviewsSection } from "@/components/products/ReviewsSection";
+import { getDiscountText } from "@/app/utils/discount";
 
 export default function CollectionGridSection({ params }: { params: { id: string } }) {
     // 1. Find the current product
@@ -43,6 +44,8 @@ export default function CollectionGridSection({ params }: { params: { id: string
     if (!product) return notFound();
 
     const isImagesEmpty = !product?.images || product.images.length === 0;
+
+    const discountText = getDiscountText(product?.price, product?.priceOriginal);
 
     return (
         <div className="min-h-screen bg-background text-foreground py-10 px-4 sm:px-6 lg:px-8">
@@ -107,9 +110,9 @@ export default function CollectionGridSection({ params }: { params: { id: string
                                     </span>
                                 )}
 
-                                {product?.discountText && (
+                                {discountText && (
                                     <span className="text-sm font-semibold text-green-600 bg-green-100 px-2 py-0.5 rounded mb-1.5">
-                                        {product.discountText}
+                                        {discountText}
                                     </span>
                                 )}
                             </div>

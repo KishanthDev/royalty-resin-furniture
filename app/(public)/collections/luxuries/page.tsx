@@ -3,7 +3,7 @@ import TextLeftSection from "@/components/sections/TextLeftSection";
 import TextRightSection from "@/components/sections/TextRightSection";
 import CtaSection from "@/components/sections/CtaSection";
 import { ProductGridSection } from "@/components/collections/CollectionGridSection";
-import { luxuryCollections } from "@/lib/luxuries.data";
+import { luxuryCollections } from "@/lib/data/luxuries.data";
 
 export default function LuxuryFurniturePage() {
   return (

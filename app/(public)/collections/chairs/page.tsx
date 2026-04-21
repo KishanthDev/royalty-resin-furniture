@@ -3,7 +3,7 @@ import TextLeftSection from "@/components/sections/TextLeftSection";
 import TextRightSection from "@/components/sections/TextRightSection";
 import CtaSection from "@/components/sections/CtaSection";
 import { ProductGridSection } from "@/components/collections/CollectionGridSection";
-import { chairCollections } from "@/lib/chairs-data";
+import { chairCollections } from "@/lib/data/chairs-data";
 
 export default function ChairsPage() {
   return (
