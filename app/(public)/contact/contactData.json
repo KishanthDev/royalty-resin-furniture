@@ -1,0 +1,35 @@
+{
+  "contactDetails": {
+    "email": "Royaltyepoxysupport@gmail.com",
+    "phone": "+91 90354 94485",
+    "workingHoursShort": "Mon – Sat, 10am – 7pm",
+    "workingHoursDetailed": [
+      "Monday – Saturday",
+      "10:00 AM – 7:00 PM IST"
+    ],
+    "locations": [
+      "Main Branch: Kengeri, Bangalore",
+      "North Karnataka Branch: Sindhanur, Raichur"
+    ]
+  },
+  "hero": {
+    "kicker": "Get in Touch",
+    "titleLine1": "Let's Create",
+    "titleLine2": "Something Beautiful",
+    "description": "Whether you have a custom project in mind, a question about our collections, or simply want to say hello — we'd love to hear from you."
+  },
+  "form": {
+    "subjects": [
+      { "value": "Custom Order", "label": "Custom Order" },
+      { "value": "Product Enquiry", "label": "Product Enquiry" },
+      { "value": "Pricing", "label": "Pricing & Quotes" },
+      { "value": "Shipping", "label": "Shipping & Delivery" },
+      { "value": "Other", "label": "Other" }
+    ]
+  },
+  "socialLinks": [
+    { "label": "Instagram", "href": "#" },
+    { "label": "Facebook", "href": "#" },
+    { "label": "Pinterest", "href": "#" }
+  ]
+}

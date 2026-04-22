@@ -1,26 +1,28 @@
 import { CTASection } from "@/components/home/CTASection";
-import { Mail, MapPin, Phone, Clock, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import Link from "next/link";
+import contactData from "./contactData.json";
+import { quickContact, studioInfo } from "./contactDetails"; 
+import { iconMap } from "./iconMap";
 
 export default function ContactPage() {
   return (
     <>
       {/* ── 1. HERO ── */}
       <section className="bg-secondary text-secondary-foreground py-20 md:py-28 relative overflow-hidden">
-        {/* Decorative background blur */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="w-[500px] h-[500px] rounded-full bg-primary/10 blur-3xl" />
         </div>
 
         <div className="relative container mx-auto px-section-px text-center max-w-3xl">
           <p className="uppercase tracking-[0.35em] text-xs text-secondary-foreground/50">
-            Get in Touch
+            {contactData.hero.kicker}
           </p>
 
           <h1 className="mt-5 font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-            Let's Create
+            {contactData.hero.titleLine1}
             <br />
-            <span className="text-primary">Something Beautiful</span>
+            <span className="text-primary">{contactData.hero.titleLine2}</span>
           </h1>
 
           <div className="mt-6 flex justify-center gap-2 items-center">
@@ -30,9 +32,7 @@ export default function ContactPage() {
           </div>
 
           <p className="mt-6 text-base md:text-lg text-secondary-foreground/70 leading-relaxed">
-            Whether you have a custom project in mind, a question about our
-            collections, or simply want to say hello — we'd love to hear from
-            you.
+            {contactData.hero.description}
           </p>
         </div>
       </section>
@@ -41,50 +41,36 @@ export default function ContactPage() {
       <section className="bg-primary/5 border-y border-border/40">
         <div className="container mx-auto px-section-px py-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
-            {[
-              {
-                icon: Mail,
-                label: "Email Us",
-                value: "Royaltyepoxysupport@gmail.com",
-                href: "mailto:Royaltyepoxysupport@gmail.com",
-              },
-              {
-                icon: Phone,
-                label: "Call Us",
-                value: "+91 90354 94485",
-                href: "tel:+919035494485",
-              },
-              {
-                icon: Clock,
-                label: "Working Hours",
-                value: "Mon – Sat, 10am – 7pm",
-                href: null,
-              },
-            ].map(({ icon: Icon, label, value, href }) => (
-              <div
-                key={label}
-                className="flex flex-col sm:flex-row items-center sm:items-start gap-3"
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <Icon className="h-4 w-4 text-primary" />
+            {quickContact.map(({ id, label, value, href }) => {
+              const Icon = iconMap[id];
+              return (
+                <div
+                  key={label}
+                  className="flex flex-col sm:flex-row items-center sm:items-start gap-3"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    {Icon && <Icon className="h-4 w-4 text-primary" />}
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-foreground/40 mb-0.5">
+                      {label}
+                    </p>
+                    {href ? (
+                      <Link
+                        href={href}
+                        className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        {value}
+                      </Link>
+                    ) : (
+                      <p className="text-sm font-medium text-foreground">
+                        {value}
+                      </p>
+                    )}
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-foreground/40 mb-0.5">
-                    {label}
-                  </p>
-                  {href ? (
-                    <Link
-                      href={href}
-                      className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-                    >
-                      {value}
-                    </Link>
-                  ) : (
-                    <p className="text-sm font-medium text-foreground">{value}</p>
-                  )}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -92,7 +78,6 @@ export default function ContactPage() {
       {/* ── 3. FORM + DETAILS ── */}
       <section className="py-section-py px-section-px bg-background">
         <div className="container mx-auto grid lg:grid-cols-5 gap-12 xl:gap-20 items-start">
-
           {/* ── FORM ── */}
           <div className="lg:col-span-3">
             <p className="uppercase tracking-widest text-xs text-foreground/40 mb-3">
@@ -177,11 +162,11 @@ export default function ContactPage() {
                   className="block w-full rounded-lg border border-border bg-input px-4 py-3 text-sm text-foreground/80 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition"
                 >
                   <option value="">Select a topic…</option>
-                  <option value="Custom Order">Custom Order</option>
-                  <option value="Product Enquiry">Product Enquiry</option>
-                  <option value="Pricing">Pricing & Quotes</option>
-                  <option value="Shipping">Shipping & Delivery</option>
-                  <option value="Other">Other</option>
+                  {contactData.form.subjects.map((subject) => (
+                    <option key={subject.value} value={subject.value}>
+                      {subject.label}
+                    </option>
+                  ))}
                 </select>
               </div>
 
@@ -230,75 +215,58 @@ export default function ContactPage() {
             </div>
 
             {/* Info cards */}
-            {[
-              {
-                icon: MapPin,
-                title: "Visit Our Showroom",
-                lines: [
-                  "Main Branch: Kengeri, Bangalore",
-                  "North Karnataka Branch: Sindhanur, Raichur",
-                ],
-                href: null,
-                cta: null,
-              },
-              {
-                icon: Mail,
-                title: "Email Us",
-                lines: ["Royaltyepoxysupport@gmail.com"],
-                href: "mailto:Royaltyepoxysupport@gmail.com",
-                cta: "Send an email",
-              },
-              {
-                icon: Phone,
-                title: "Call or WhatsApp",
-                lines: ["+91 90354 94485"],
-                href: "tel:+919035494485",
-                cta: "Call now",
-              },
-              {
-                icon: Clock,
-                title: "Working Hours",
-                lines: ["Monday – Saturday", "10:00 AM – 7:00 PM IST"],
-                href: null,
-                cta: null,
-              },
-            ].map(({ icon: Icon, title, lines, href, cta }) => (
-              <div
-                key={title}
-                className="flex items-start gap-4 p-5 rounded-xl border border-border/40 bg-primary/5 hover:border-primary/30 transition-colors"
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <Icon className="h-4 w-4 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-sm mb-1">{title}</h3>
-                  <div className="space-y-3">
-                    <div className="space-y-1">
-                      {lines.map((line, i) => {
-                        const [title, location] = line.split(":");
-
-                        return (
-                          <p key={i} className="text-sm text-foreground/80">
-                            <span className="font-semibold text-foreground">
-                              {title}:
-                            </span>{" "}
-                            <span className="text-foreground/60">{location}</span>
-                          </p>
-                        );
-                      })}
-                    </div>
+            {studioInfo.map(({ id, title, lines, href, cta }) => {
+              const Icon = iconMap[id];
+              return (
+                <div
+                  key={title}
+                  className="flex items-start gap-4 p-5 rounded-xl border border-border/40 bg-primary/5 hover:border-primary/30 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                    {Icon && <Icon className="h-4 w-4 text-primary" />}
                   </div>
-                  {href && cta && (
-                    <Link
-                      href={href}
-                      className="inline-block mt-2 text-xs text-primary font-medium hover:underline"
-                    >
-                      {cta} →
-                    </Link>
-                  )}
+                  <div>
+                    <h3 className="font-semibold text-sm mb-1">{title}</h3>
+                    <div className="space-y-3">
+                      <div className="space-y-1">
+                        {lines.map((line, i) => {
+                          const splitLine = line.split(":");
+                          const lineTitle = splitLine[0];
+                          const location = splitLine.slice(1).join(":"); // Re-join if there were multiple colons
+
+                          return (
+                            <p key={i} className="text-sm text-foreground/80">
+                              {splitLine.length > 1 ? (
+                                <>
+                                  <span className="font-semibold text-foreground">
+                                    {lineTitle}:
+                                  </span>{" "}
+                                  <span className="text-foreground/60">
+                                    {location}
+                                  </span>
+                                </>
+                              ) : (
+                                <span className="text-foreground/60">
+                                  {line}
+                                </span>
+                              )}
+                            </p>
+                          );
+                        })}
+                      </div>
+                    </div>
+                    {href && cta && (
+                      <Link
+                        href={href}
+                        className="inline-block mt-2 text-xs text-primary font-medium hover:underline"
+                      >
+                        {cta} →
+                      </Link>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
 
             {/* Social links */}
             <div className="pt-2">
@@ -306,11 +274,7 @@ export default function ContactPage() {
                 Follow Our Work
               </p>
               <div className="flex gap-3">
-                {[
-                  { label: "Instagram", href: "#" },
-                  { label: "Facebook", href: "#" },
-                  { label: "Pinterest", href: "#" },
-                ].map((s) => (
+                {contactData.socialLinks.map((s) => (
                   <Link
                     key={s.label}
                     href={s.href}
